@@ -1,8 +1,10 @@
 values_default = {
     /*
     https://sahussavat.github.io/read_with_choices/index.html?choices=
-    
+
     https://sahussavat.github.io/read_with_choices/index.html?select=
+    
+    https://sahussavat.github.io/read_with_choices/next_page.html?page_id=
     */
     //========================================================================================
     "HP": {

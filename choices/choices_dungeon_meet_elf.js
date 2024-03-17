@@ -70,7 +70,7 @@ choices_dungeon_meet_elf = {
             ],
         },
         "used_to_meet_elf":{
-            "choices_detail":"คุณได้กลับมายังสถานที่ที่คุณได้ช่วยเหลือหญิงสาวชาวเอลฟ์ไว้?",
+            "choices_detail":"คุณได้กลับมายังสถานที่ที่คุณได้ช่วยเหลือหญิงสาวชาวเอลฟ์ไว้",
             "condition": [
             ],
             "results": [
