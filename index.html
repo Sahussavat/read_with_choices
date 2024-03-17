@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        textarea:read-only {
+            border: 0;
+            box-shadow: none;
+            background-color: white;
+            resize: none;
+        }
+    </style>
+    <title >Page Title</title>
+</head>
+<body>
+    <!-- =============================================================================================== -->
+    <!-- Modal -->
+    <button type="button" class="btn btn-primary" onclick="
+        show_save_list();
+        $('#save_list_modal').modal('toggle');
+        ">
+        Save
+    </button>
+
+    <div class="modal fade" id="save_list_modal" aria-labelledby="save_list_modal_label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="save_list_modal_label">Save</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="save_box">
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                data-bs-toggle="modal" data-bs-target="#create_new_save">เซฟใหม่</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="create_new_save" aria-labelledby="create_new_save_label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="create_new_save_label">กรุณาใส่ชื่อเซฟ</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="save_name_input"
+                     style="padding-right: 50%;" placeholder="Save name">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                data-bs-toggle="modal" data-bs-target="#save_list_modal"
+                onclick="$('#save_name_input').val('');">ยกเลิก</button>
+                <button type="button" class="btn btn-primary"
+                onclick="
+                let save_name_input = $('#save_name_input');
+                if(save_name_input.val()){
+                    save_data(create_save(save_name_input.val()));
+                    show_save_list();
+                    save_name_input.val('');
+                    $('#create_new_save').modal('toggle');
+                    $('#save_list_modal').modal('toggle');
+                }">ยืนยันเซฟ</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="delete_save" aria-labelledby="delete_save_label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="delete_save_label"></h5>
+            </div>
+            <div class="modal-body">
+                <button type="button" class="btn btn-danger" id="delete_save_confirm_btn"
+                onclick="
+                    delete_save($(this).data('save_data'));
+                    show_save_list();
+                    $('#save_list_modal').modal('toggle');
+                    $('#delete_save').modal('toggle');
+                ">ยืนยัน</button>
+                <button type="button" style="margin-left: 5%;" class="btn btn-secondary" data-bs-dismiss="modal"
+                data-bs-toggle="modal" data-bs-target="#save_list_modal">ยกเลิก</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="overwrite_save" aria-labelledby="overwrite_save_label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="overwrite_save_label"></h5>
+            </div>
+            <div class="modal-body">
+                <button type="button" class="btn btn-primary" id="overwrite_save_confirm_btn"
+                onclick="
+                    let save = $(this).data('save_data');
+                    save_data(create_save(save['save_name']), save);
+                    show_save_list();
+                    $('#save_list_modal').modal('toggle');
+                    $('#overwrite_save').modal('toggle');
+                ">ยืนยัน</button>
+                <button type="button" style="margin-left: 5%;" class="btn btn-secondary" data-bs-dismiss="modal"
+                data-bs-toggle="modal" data-bs-target="#save_list_modal">ยกเลิก</button>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <button type="button" class="btn btn-primary" onclick="
+        show_load_save_list();
+        $('#load_save_list_modal').modal('toggle');
+    ">
+        โหลด Save
+    </button>
+
+    <div class="modal fade" id="load_save_list_modal" aria-labelledby="load_save_list_modal_label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="load_save_list_modal_label">โหลด Save</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="load_save_box">
+                
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="delete_load_save" aria-labelledby="delete_load_save_label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="delete_load_save_label"></h5>
+            </div>
+            <div class="modal-body">
+                <button type="button" class="btn btn-danger" id="delete_load_save_confirm_btn"
+                onclick="
+                    delete_save($(this).data('save_data'));
+                    show_load_save_list();
+                    $('#load_save_list_modal').modal('toggle');
+                    $('#delete_load_save').modal('toggle');
+                ">ยืนยัน</button>
+                <button type="button" style="margin-left: 5%;" class="btn btn-secondary" data-bs-dismiss="modal"
+                data-bs-toggle="modal" data-bs-target="#load_save_list_modal">ยกเลิก</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- =============================================================================================== -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col" style="margin-top: 5%;">
+                <div style="margin: 5%; border: 1px solid; min-height: 100%;">
+                    <div style="margin: 5%;" id="show_values_box">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col" id="choices_box" style="margin: 5%;">
+                
+            </div>
+            <div class="w-100"></div>
+            <div class="col" style="margin-top: 5%; margin-bottom: 5%;">
+                <div style="border: 1px solid; min-height: 100%;">
+                    <div style="margin: 5%;" id="show_items_box">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col" style="margin-top: 5%; margin-bottom: 5%;">
+                <div style="border: 1px solid; min-height: 100%;">
+                    <div style="margin: 5%;" id="item_show_detail_box" hidden>
+                        <div style="word-wrap: break-word;" id="item_name"></div>
+                        <div style="word-wrap: break-word; margin-top: 5%;" id="item_detail"></div>
+                        <div style="margin-top: 5%;" id="item_use_area" hidden>
+                            <button class="btn btn-primary" id="use_item_btn">ใช้</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+</body>
+
+<script src="./choices_system.js" charset="utf-8"></script>
+<script src="./show_values.js" charset="utf-8"></script>
+<script src="./save_n_load_system.js" charset="utf-8"></script>
+<script>
+    function url_path(id_path){
+        let test_path = true;
+        
+        if(test_path){
+            return "https://www.readawrite.com/?action=manage_chapter&chapter_id="+id_path;
+        } else {
+            return "https://www.readawrite.com/c/"+id_path;
+        }
+    }
+</script>
+<script src="./choices/choices_dungeon_1.js" charset="utf-8"></script>
+<script src="./choices/choices_dungeon_camp.js" charset="utf-8"></script>
+<script src="./choices/choices_vilage.js" charset="utf-8"></script>
+<script src="./choices/choices_potion_shop.js" charset="utf-8"></script>
+<script src="./choices/choices_goblin.js" charset="utf-8"></script>
+<script src="./choices/choices_dungeon_meet_elf.js" charset="utf-8"></script>
+<script src="./choices/choices_dungeon_mimic.js" charset="utf-8"></script>
+<script src="./choices/choices_wolf_boss.js" charset="utf-8"></script>
+<script src="./choices/choices_dungeon_library.js" charset="utf-8"></script>
+<script src="./choices/choices_research_lab.js" charset="utf-8"></script>
+<script src="./choices/choice_dungeon_ritual.js" charset="utf-8"></script>
+<script src="./choices/choice_result.js" charset="utf-8"></script>
+<script src="./choices/choices_choose_ability.js" charset="utf-8"></script>
+<script src="./abilities.js" charset="utf-8"></script>
+<script src="./test_game.js" charset="utf-8"></script>
+<script>
+    function start(){
+        let params = new URL(window.location.href);
+        let param_choices_name = params.searchParams.get("choices");
+        let param_select_name = params.searchParams.get("select");
+        let param_select_nickname = params.searchParams.get("nickname");
+        if(param_choices_name !== "new_game"){
+            set_pure_val();
+        }
+        if(select_encounter("./index.html" + window.location.search)){
+            if(param_choices_name)
+            get_choices(param_choices_name);
+            else if(param_select_name){
+                if(param_select_nickname){
+                    select_path_when_enter(param_select_name, param_select_nickname);
+                } else {
+                    select_path_when_enter(param_select_name);
+                }
+            }
+        }
+        show_values_n_items_to_player();
+    }
+    start();
+
+    show_load_save_list()
+    show_save_list()
+</script>
+</html>
