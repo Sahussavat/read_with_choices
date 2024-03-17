@@ -42,7 +42,7 @@ function create_save(save_name){
     return {
         "save_name": save_name,
         "date": (new Date()).getTime(),
-        "current_page": window.location.pathname,
+        "current_page": window.location.href,
         "save_data": get_pure_val(),
         "buffer_prev_choices": buffer_prev_choices,
     };
