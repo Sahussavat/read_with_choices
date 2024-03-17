@@ -126,6 +126,7 @@ choices_potion_shop = {
                     ]
                 },
                 {
+                    "nickname": "village",
                     "detail": "[ เดินทางกลับไปยังใจกลางหมู่บ้าน ]",
                     "paths":[ 
                         [ [["first_time_vilage", "<=", 0]], url_path("bd13952e7fb4941dd0cee6e9cee2b308")],
