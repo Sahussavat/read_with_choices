@@ -52,7 +52,7 @@ function load_save(save_target){
     save_current_data(save_target['save_data']);
     set_buffer_prev(save_target['buffer_prev_choices']);
     save_buffer_prev();
-    window.location.href = window.location.hostname + save_target['current_page'];
+    window.location.href = save_target['current_page'];
 }
 
 function auto_save(path_save_url = ""){
