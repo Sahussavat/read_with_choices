@@ -58,6 +58,22 @@ choices_dungeon_mimic = {
                         ["first_time_library", "=", 1],
                     ]
                 },
+                {
+                    "nickname":"go_back",
+                    "detail":"[ เดินย้อนกลับไป ]", 
+                    "paths":[ 
+                        [ [["first_time_meet_elf", "<=", 0]], url_path("0e31233be036fd0d90051742775f932b")],
+                        [ [["first_time_meet_elf", ">", 0, "and"],
+                        ["is_elf_healed", "<=", 0 ]], url_path("9f760db6b3fca4d80f59cbc83dd9e64f")],
+                        [ [["first_time_meet_elf", ">", 0, "and"],
+                        ["is_elf_healed", ">", 1 ]], url_path("fade4e873058e43b06c7e053ada4785d")],
+                    ],
+                    "condition": [
+                    ],
+                    "results": [
+                        ["first_time_meet_elf", "=", 1],
+                    ]
+                },
             ],
         },
         "meet_mimic_alone":{
