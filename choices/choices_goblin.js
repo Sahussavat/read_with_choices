@@ -50,8 +50,27 @@ choices_goblin = {
                     "detail":"[ แก้กับดัก ]", 
                     "paths":[ 
                         [ [["้how_good_can_you_fix", "=", 1, "or"],
-                        ["", "random", 50],], url_path("636cb7d3ef567f8288379f47193142e3")],
+                        ["", "random", 50],], "./index.html?select=kill_goblin_w_trap_success"],
                         [ [], url_path("b7310f0bbccec40c9ac078b3e12a2119")],
+                    ],
+                    "condition": [
+                    ],
+                    "results": [
+                    ]
+                },
+            ],
+        },
+        "kill_goblin_w_trap_success":{
+            "choices_detail":"คุณได้แก้ไขกับดักสำเร็จ",
+            "condition": [
+            ],
+            "results": [
+            ],
+            "choices": [
+                {
+                    "detail":"[ ไปต่อ ]", 
+                    "paths":[ 
+                        [ [], url_path("636cb7d3ef567f8288379f47193142e3")],
                     ],
                     "condition": [
                     ],
