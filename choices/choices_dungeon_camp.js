@@ -28,7 +28,6 @@ choices_dungeon_camp = {
                         ["", "random", 50],
                     ],
                     "results": [
-                        ["ชะแลง", "+", 1],
                     ]
                 },
             ],
@@ -42,6 +41,7 @@ choices_dungeon_camp = {
             ],
             "choices": [
                 {
+                    "nickname":"accept_quest_missing",
                     "detail": "[ เปลี่ยนใจ แล้วกลับไปหาหัวหน้าโจรเพื่อบอกว่าจะตามหาคนที่หายไปให้ ]",
                     "paths":[ 
                         [ [], url_path("f516dfe6938b32c243241860589f9b57")],
@@ -56,7 +56,7 @@ choices_dungeon_camp = {
                     ]
                 },
                 {
-                    "nickname": "go_next",
+                    "nickname": "go_next_secret",
                     "detail": "[ ใช้ทางลัดเพื่อไปยังห้องโถงที่เต็มไปด้วยชั้นหนังสือ ]",
                     "paths":[ 
                         [ [["first_time_library", "=", 0, "and"],
