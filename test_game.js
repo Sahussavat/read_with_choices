@@ -1,4 +1,9 @@
 values_default = {
+    /*
+    https://sahussavat.github.io/read_with_choices/index.html?choices=
+    
+    https://sahussavat.github.io/read_with_choices/index.html?select=
+    */
     //========================================================================================
     "HP": {
         "current_val": 100,
