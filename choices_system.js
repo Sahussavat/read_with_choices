@@ -76,10 +76,12 @@ function select_path_when_enter(choices_name, chosen_name = "_no_chosen"){
                 let choice = choices_all[choice_no];
                 if(check_condition(choice["condition"]) && chosen_name === "_no_chosen"
                     || check_condition(choice["condition"]) && chosen_name === choice["nickname"]){
-                    do_results(choice["results"]);
-                    if("results_w_condition" in choice)
-                        do_results_with_condition(choice["results_w_condition"]);
+                    
                     let path = get_select_path(choice["paths"]);
+                    do_results(choice["results"]);
+                    if("results_w_condition" in choice){
+                        do_results_with_condition(choice["results_w_condition"]);
+                    }
                     window.location.href = path ? path :  window.location.href;
                     break;
                 }  
