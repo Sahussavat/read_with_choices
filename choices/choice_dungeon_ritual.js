@@ -129,10 +129,10 @@ choice_dungeon_ritual = {
                     "detail": "[ ไปต่อ ]",
                     "paths":[ 
                         [ [["found_back_story", "=", 1, "and"],
-                        ["Pure Potion", "=", 1],], url_path("657b1656e031e22d2f0eb08f0942cd3f")],
+                        ["Pure Potion", "=", 1],], url_path("6ad041b67f39443091a0076cc28ff073")],
                         
                         [ [["found_back_story", "=", 1, "and"],
-                        ["Pure Potion", "=", 0],], url_path("657b1656e031e22d2f0eb08f0942cd3f")],
+                        ["Pure Potion", "=", 0],], url_path("2cbdd1feba7e72def167d4700e078aea")],
                     ],
                     "condition": [
                     ],
