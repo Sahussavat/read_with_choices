@@ -111,7 +111,7 @@ choices_dungeon_mimic = {
             ],
             "choices": [
                 {
-                    "detail":"[ สู้ ]", 
+                    "detail":"[ ต่อ ]", 
                     "paths":[ 
                         [ [], url_path("c8f74783d05dcb8f681ad1eaa6386139")],
                     ],
