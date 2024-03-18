@@ -20,7 +20,7 @@ choice_dungeon_ritual = {
                     "results": [
                         ["is_yana_safe", "=", 1],
                         ["Pure Potion", "-", 1],
-                        ["is_plague_end", "=", 1],
+                        ["is_plague_clear", "=", 1],
                     ]
                 },
                 {
@@ -35,7 +35,7 @@ choice_dungeon_ritual = {
                     ],
                     "results": [
                         ["is_elf_dead", "=", 1],
-                        ["is_plague_end", "=", 1],
+                        ["is_plague_clear", "=", 1],
                     ]
                 },
                 {
