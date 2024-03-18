@@ -198,7 +198,6 @@ choices_wolf_boss = {
                     "condition": [
                     ],
                     "results": [
-                        ["first_time_goblin", "=", 1],
                     ]
                 },
             ],
@@ -222,7 +221,6 @@ choices_wolf_boss = {
                     "condition": [
                     ],
                     "results": [
-                        ["first_time_goblin", "=", 1],
                     ]
                 },
             ],
@@ -246,7 +244,6 @@ choices_wolf_boss = {
                     "condition": [
                     ],
                     "results": [
-                        ["first_time_goblin", "=", 1],
                     ]
                 },
             ],
@@ -353,7 +350,6 @@ choices_wolf_boss = {
                     "condition": [
                     ],
                     "results": [
-                        ["first_time_goblin", "=", 1],
                     ]
                 },
             ],
@@ -449,7 +445,6 @@ choices_wolf_boss = {
                     "condition": [
                     ],
                     "results": [
-                        ["first_time_goblin", "=", 1],
                     ]
                 },
             ],
