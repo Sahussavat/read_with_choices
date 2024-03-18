@@ -90,7 +90,9 @@ function select_path_when_enter(choices_name, chosen_name = "_no_chosen"){
                     if(typeof path === "function"){
                         path();
                     } else {
-                        window.location.href = path ? path :  window.location.href;
+                        if(select_encounter(path)){
+                            window.location.href = path ? path :  window.location.href;
+                        }
                     }
                     break;
                 }  
