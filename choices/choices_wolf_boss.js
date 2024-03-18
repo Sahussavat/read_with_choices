@@ -337,6 +337,27 @@ choices_wolf_boss = {
                 },
             ],
         },
+        "hide_wolf_success":{
+            "choices_detail":"\\v[how_you_call_player]ได้ซ่อนตัวจากเจ้าหมาป่ายักษ์สำเร็จ",
+            "condition": [
+            ],
+            "results": [
+            ],
+            "choices": [
+                {
+                    "nickname": "go_next",
+                    "detail": "[ ไปต่อ ]",
+                    "paths":[ 
+                        [ [["", "_check_hav_prev", 0]], go_to_prev_choice()],
+                    ],
+                    "condition": [
+                    ],
+                    "results": [
+                        ["first_time_goblin", "=", 1],
+                    ]
+                },
+            ],
+        },
         //========================================================================================================
         "results_escape_wolf":{
             "choices_detail":"ดูผลลัพธ์การวิ่งหนีจากหมาป่ายักษ์",
