@@ -67,6 +67,19 @@ choices_dungeon_meet_elf = {
                         ["first_time_mimic", "=", 1],
                     ]
                 },
+                {
+                    "nickname":"go_back",
+                    "detail": "[ เดินทางกลับไปยังสถานที่ที่ได้สังหารเหล่าก็อบลิน ]",
+                    "paths":[ 
+                        [ [["first_time_goblin", "<=", 0]], url_path("e99e019a881fe7638c28abb0829930a9")],
+                        [ [["first_time_goblin", ">", 0]], url_path("cd8ba1339a2c6d7bf83abd0c3a8d5130")],
+                    ],
+                    "condition": [
+                    ],
+                    "results": [
+                        ["first_time_goblin", "=", 1],
+                    ]
+                },
             ],
         },
         "used_to_meet_elf":{
