@@ -48,6 +48,8 @@ choices_dungeon_library = {
                             ["is_kill_all_thiefs", "=", 0]], url_path("855a2fd464258f5efdf00e66dfa24325")],
                         [ [["first_time_use_secret_way", "=", 0, "and"],
                             ["is_kill_all_thiefs", "=", 1]], url_path("678cafd0e2ddcb2eece6092a07bc1cc6")],
+                            
+                        [[], "./index.html?select=use_secret_way"],
                     ],
                     "condition": [
                         ["is_secret_way_opened", "=", 1]
