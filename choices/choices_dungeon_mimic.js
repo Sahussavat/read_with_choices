@@ -6,12 +6,6 @@ choices_dungeon_mimic = {
             ],
             "results": [
             ],
-            "results_w_condition":[
-                [[["wolf_enable_to_attack", "=", 0, "and"],
-                ["wolf_enable_to_attack_delay", "=", 0, "and"]], ["wolf_enable_to_attack", "=", 1]],
-
-                [[["wolf_enable_to_attack_delay", ">", 0, "and"],], ["wolf_enable_to_attack_delay", "-", 1]]
-            ],
             "choices": [
                 {
                     "nickname":"open",
@@ -56,7 +50,13 @@ choices_dungeon_mimic = {
                     ],
                     "results": [
                         ["first_time_library", "=", 1],
-                    ]
+                    ],
+                    "results_w_condition":[
+                        [[["wolf_enable_to_attack", "=", 0, "and"],
+                        ["wolf_enable_to_attack_delay", "=", 0, "and"]], ["wolf_enable_to_attack", "=", 1]],
+        
+                        [[["wolf_enable_to_attack_delay", ">", 0, "and"],], ["wolf_enable_to_attack_delay", "-", 1]]
+                    ],
                 },
                 {
                     "nickname":"go_back",
@@ -72,7 +72,13 @@ choices_dungeon_mimic = {
                     ],
                     "results": [
                         ["first_time_meet_elf", "=", 1],
-                    ]
+                    ],
+                    "results_w_condition":[
+                        [[["wolf_enable_to_attack", "=", 0, "and"],
+                        ["wolf_enable_to_attack_delay", "=", 0, "and"]], ["wolf_enable_to_attack", "=", 1]],
+        
+                        [[["wolf_enable_to_attack_delay", ">", 0, "and"],], ["wolf_enable_to_attack_delay", "-", 1]]
+                    ],
                 },
             ],
         },
@@ -192,7 +198,13 @@ choices_dungeon_mimic = {
                     ],
                     "results": [
                         ["first_time_library", "=", 1],
-                    ]
+                    ],
+                    "results_w_condition":[
+                        [[["wolf_enable_to_attack", "=", 0, "and"],
+                        ["wolf_enable_to_attack_delay", "=", 0, "and"]], ["wolf_enable_to_attack", "=", 1]],
+        
+                        [[["wolf_enable_to_attack_delay", ">", 0, "and"],], ["wolf_enable_to_attack_delay", "-", 1]]
+                    ],
                 },
                 {
                     "detail":"[ เดินย้อนกลับไป ]", 
@@ -207,7 +219,13 @@ choices_dungeon_mimic = {
                     ],
                     "results": [
                         ["first_time_meet_elf", "=", 1],
-                    ]
+                    ],
+                    "results_w_condition":[
+                        [[["wolf_enable_to_attack", "=", 0, "and"],
+                        ["wolf_enable_to_attack_delay", "=", 0, "and"]], ["wolf_enable_to_attack", "=", 1]],
+        
+                        [[["wolf_enable_to_attack_delay", ">", 0, "and"],], ["wolf_enable_to_attack_delay", "-", 1]]
+                    ],
                 },
             ],
         },
@@ -240,7 +258,13 @@ choices_dungeon_mimic = {
                     ],
                     "results": [
                         ["first_time_library", "=", 1],
-                    ]
+                    ],
+                    "results_w_condition":[
+                        [[["wolf_enable_to_attack", "=", 0, "and"],
+                        ["wolf_enable_to_attack_delay", "=", 0, "and"]], ["wolf_enable_to_attack", "=", 1]],
+        
+                        [[["wolf_enable_to_attack_delay", ">", 0, "and"],], ["wolf_enable_to_attack_delay", "-", 1]]
+                    ],
                 },
                 {
                     "detail":"[ เดินย้อนกลับไป ]", 
@@ -255,7 +279,13 @@ choices_dungeon_mimic = {
                     ],
                     "results": [
                         ["first_time_meet_elf", "=", 1],
-                    ]
+                    ],
+                    "results_w_condition":[
+                        [[["wolf_enable_to_attack", "=", 0, "and"],
+                        ["wolf_enable_to_attack_delay", "=", 0, "and"]], ["wolf_enable_to_attack", "=", 1]],
+        
+                        [[["wolf_enable_to_attack_delay", ">", 0, "and"],], ["wolf_enable_to_attack_delay", "-", 1]]
+                    ],
                 },
             ],
         },
@@ -287,7 +317,13 @@ choices_dungeon_mimic = {
                     ],
                     "results": [
                         ["first_time_library", "=", 1],
-                    ]
+                    ],
+                    "results_w_condition":[
+                        [[["wolf_enable_to_attack", "=", 0, "and"],
+                        ["wolf_enable_to_attack_delay", "=", 0, "and"]], ["wolf_enable_to_attack", "=", 1]],
+        
+                        [[["wolf_enable_to_attack_delay", ">", 0, "and"],], ["wolf_enable_to_attack_delay", "-", 1]]
+                    ],
                 },
                 {
                     "detail":"[ เดินย้อนกลับไป ]", 
@@ -302,7 +338,13 @@ choices_dungeon_mimic = {
                     ],
                     "results": [
                         ["first_time_meet_elf", "=", 1],
-                    ]
+                    ],
+                    "results_w_condition":[
+                        [[["wolf_enable_to_attack", "=", 0, "and"],
+                        ["wolf_enable_to_attack_delay", "=", 0, "and"]], ["wolf_enable_to_attack", "=", 1]],
+
+                        [[["wolf_enable_to_attack_delay", ">", 0, "and"],], ["wolf_enable_to_attack_delay", "-", 1]]
+                    ],
                 },
             ],
         },

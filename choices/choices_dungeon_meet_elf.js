@@ -6,12 +6,6 @@ choices_dungeon_meet_elf = {
             ],
             "results": [
             ],
-            "results_w_condition":[
-                [[["wolf_enable_to_attack", "=", 0, "and"],
-                ["wolf_enable_to_attack_delay", "=", 0, "and"]], ["wolf_enable_to_attack", "=", 1]],
-
-                [[["wolf_enable_to_attack_delay", ">", 0, "and"],], ["wolf_enable_to_attack_delay", "-", 1]],
-            ],
             "choices": [
                 {
                     "nickname":"give_hp_potion",
@@ -65,7 +59,13 @@ choices_dungeon_meet_elf = {
                     ],
                     "results": [
                         ["first_time_mimic", "=", 1],
-                    ]
+                    ],
+                    "results_w_condition":[
+                        [[["wolf_enable_to_attack", "=", 0, "and"],
+                        ["wolf_enable_to_attack_delay", "=", 0, "and"]], ["wolf_enable_to_attack", "=", 1]],
+
+                        [[["wolf_enable_to_attack_delay", ">", 0, "and"],], ["wolf_enable_to_attack_delay", "-", 1]]
+                    ],
                 },
                 {
                     "nickname":"go_back",
@@ -78,7 +78,13 @@ choices_dungeon_meet_elf = {
                     ],
                     "results": [
                         ["first_time_goblin", "=", 1],
-                    ]
+                    ],
+                    "results_w_condition":[
+                        [[["wolf_enable_to_attack", "=", 0, "and"],
+                        ["wolf_enable_to_attack_delay", "=", 0, "and"]], ["wolf_enable_to_attack", "=", 1]],
+
+                        [[["wolf_enable_to_attack_delay", ">", 0, "and"],], ["wolf_enable_to_attack_delay", "-", 1]]
+                    ],
                 },
             ],
         },
@@ -127,7 +133,13 @@ choices_dungeon_meet_elf = {
                     ],
                     "results": [
                         ["first_time_mimic", "=", 1],
-                    ]
+                    ],
+                    "results_w_condition":[
+                        [[["wolf_enable_to_attack", "=", 0, "and"],
+                        ["wolf_enable_to_attack_delay", "=", 0, "and"]], ["wolf_enable_to_attack", "=", 1]],
+
+                        [[["wolf_enable_to_attack_delay", ">", 0, "and"],], ["wolf_enable_to_attack_delay", "-", 1]]
+                    ],
                 },
                 {
                     "nickname":"go_back",
@@ -140,7 +152,13 @@ choices_dungeon_meet_elf = {
                     ],
                     "results": [
                         ["first_time_goblin", "=", 1],
-                    ]
+                    ],
+                    "results_w_condition":[
+                        [[["wolf_enable_to_attack", "=", 0, "and"],
+                        ["wolf_enable_to_attack_delay", "=", 0, "and"]], ["wolf_enable_to_attack", "=", 1]],
+
+                        [[["wolf_enable_to_attack_delay", ">", 0, "and"],], ["wolf_enable_to_attack_delay", "-", 1]]
+                    ],
                 },
             ],
         },

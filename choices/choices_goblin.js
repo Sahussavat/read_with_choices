@@ -6,12 +6,6 @@ choices_goblin = {
             ],
             "results": [
             ],
-            "results_w_condition":[
-                [[["wolf_enable_to_attack", "=", 0, "and"],
-                ["wolf_enable_to_attack_delay", "=", 0, "and"]], ["wolf_enable_to_attack", "=", 1]],
-
-                [[["wolf_enable_to_attack_delay", ">", 0, "and"],], ["wolf_enable_to_attack_delay", "-", 1]],
-            ],
             "choices": [
                 {
                     "nickname":"fight_goblins",
@@ -76,7 +70,13 @@ choices_goblin = {
                     ],
                     "results": [
                         ["is_kill_all_goblins", "=", 1],
-                    ]
+                    ],
+                    "results_w_condition":[
+                        [[["wolf_enable_to_attack", "=", 0, "and"],
+                        ["wolf_enable_to_attack_delay", "=", 0, "and"]], ["wolf_enable_to_attack", "=", 1]],
+
+                        [[["wolf_enable_to_attack_delay", ">", 0, "and"],], ["wolf_enable_to_attack_delay", "-", 1]]
+                    ],
                 },
             ],
         },
@@ -107,7 +107,13 @@ choices_goblin = {
                     ],
                     "results": [
                         ["first_time_meet_elf", "=", 1],
-                    ]
+                    ],
+                    "results_w_condition":[
+                        [[["wolf_enable_to_attack", "=", 0, "and"],
+                        ["wolf_enable_to_attack_delay", "=", 0, "and"]], ["wolf_enable_to_attack", "=", 1]],
+
+                        [[["wolf_enable_to_attack_delay", ">", 0, "and"],], ["wolf_enable_to_attack_delay", "-", 1]]
+                    ],
                 },
                 {
                     "nickname": "go_back",
@@ -238,7 +244,13 @@ choices_goblin = {
                     ],
                     "results": [
                         ["first_time_meet_elf", "=", 1],
-                    ]
+                    ],
+                    "results_w_condition":[
+                        [[["wolf_enable_to_attack", "=", 0, "and"],
+                        ["wolf_enable_to_attack_delay", "=", 0, "and"]], ["wolf_enable_to_attack", "=", 1]],
+
+                        [[["wolf_enable_to_attack_delay", ">", 0, "and"],], ["wolf_enable_to_attack_delay", "-", 1]]
+                    ],
                 },
                 {
                     "detail":"[ กลับไปยังแคมป์ของเหล่ากองโจร ]", 
@@ -300,7 +312,13 @@ choices_goblin = {
                     ],
                     "results": [
                         ["first_time_meet_elf", "=", 1],
-                    ]
+                    ],
+                    "results_w_condition":[
+                        [[["wolf_enable_to_attack", "=", 0, "and"],
+                        ["wolf_enable_to_attack_delay", "=", 0, "and"]], ["wolf_enable_to_attack", "=", 1]],
+
+                        [[["wolf_enable_to_attack_delay", ">", 0, "and"],], ["wolf_enable_to_attack_delay", "-", 1]]
+                    ],
                 },
                 {
                     "detail":"[ กลับไปยังแคมป์ของเหล่ากองโจร ]", 
@@ -362,7 +380,13 @@ choices_goblin = {
                     ],
                     "results": [
                         ["first_time_meet_elf", "=", 1],
-                    ]
+                    ],
+                    "results_w_condition":[
+                        [[["wolf_enable_to_attack", "=", 0, "and"],
+                        ["wolf_enable_to_attack_delay", "=", 0, "and"]], ["wolf_enable_to_attack", "=", 1]],
+
+                        [[["wolf_enable_to_attack_delay", ">", 0, "and"],], ["wolf_enable_to_attack_delay", "-", 1]]
+                    ],
                 },
                 {
                     "detail":"[ กลับไปยังแคมป์ของเหล่ากองโจร ]", 

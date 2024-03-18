@@ -303,7 +303,7 @@ choices_wolf_boss = {
                     "nickname":"run",
                     "detail": "[ หนี ]",
                     "paths":[ 
-                        [ [["", "!random", 50]], "./index.html?choices=results_escape_wolf"],
+                        [ [["", "!random", 50]], "./index.html?select=results_escape_wolf"],
                         [ [], "./index.html?choices=escape_wolf_success"],
                     ],
                     "condition": [
@@ -398,7 +398,7 @@ choices_wolf_boss = {
                     "nickname":"run",
                     "detail": "[ หนีต่อ ]",
                     "paths":[ 
-                        [ [["", "!random", 50]], "./index.html?choices=results_escape_wolf"],
+                        [ [["", "!random", 50]], "./index.html?select=results_escape_wolf"],
                         [ [], "./index.html?choices=escape_wolf_success"],
                     ],
                     "condition": [
