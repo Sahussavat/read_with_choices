@@ -1,7 +1,6 @@
 
 function get_choices(choices_name, enable_choice_results = true){
     if(choices_name in data["choose_choices"]){
-        console.log(choices_name);
         var choices_all = data["choose_choices"][choices_name]['choices'];
         var choices_detail = data["choose_choices"][choices_name]['choices_detail'];
         choices_detail = find_and_replace_variable_text(choices_detail);
@@ -86,7 +85,6 @@ function select_path_when_enter(choices_name, chosen_name = "_no_chosen"){
                     let path = get_select_path(choice["paths"]);
                     do_results(choice["results"]);
                     if("results_w_condition" in choice){
-                        console.log(choice, "12322");
                         do_results_with_condition(choice["results_w_condition"]);
                     }
                     if(typeof path === "function"){
@@ -191,7 +189,6 @@ function check_condition(conditions){
     var boolean_sym = "and";
     for(const condition of conditions){
         let value = 0;
-        console.log(condition);
         if(condition){
             if(condition[0] in values)
             {

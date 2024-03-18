@@ -304,7 +304,7 @@ choices_wolf_boss = {
                     "detail": "[ หนี ]",
                     "paths":[ 
                         [ [["", "!random", 50]], "./index.html?choices=results_escape_wolf"],
-                        [ [], "./index.html?select=escape_wolf_success"],
+                        [ [], "./index.html?choices=escape_wolf_success"],
                     ],
                     "condition": [
                     ],
@@ -399,7 +399,7 @@ choices_wolf_boss = {
                     "detail": "[ หนีต่อ ]",
                     "paths":[ 
                         [ [["", "!random", 50]], "./index.html?choices=results_escape_wolf"],
-                        [ [], "./index.html?select=escape_wolf_success"],
+                        [ [], "./index.html?choices=escape_wolf_success"],
                     ],
                     "condition": [
                     ],
