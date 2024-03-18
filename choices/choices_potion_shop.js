@@ -19,7 +19,7 @@ choices_potion_shop = {
                         [[], url_path("afcbc3e4d6ccb53921d7a63d33b31930")]
                     ],
                     "condition": [
-                        ["Pure Potion", "=", 0],
+                        ["Pure Potion", "=", 0, "and"],
                         ["found_back_story", "=", 1],
                     ],
                     "results": [
