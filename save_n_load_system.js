@@ -112,6 +112,11 @@ function set_buffer_prev(load_save_data = []){
 
 buffer_prev_choices = set_buffer_prev();
 
+function reset_buffer_prev(){
+    buffer_prev_choices = [];
+    save_buffer_prev();
+}
+
 function add_to_buffer_prev(url){
     buffer_prev_choices.push(url);
     save_buffer_prev();
