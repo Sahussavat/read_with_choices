@@ -90,8 +90,9 @@ function select_path_when_enter(choices_name, chosen_name = "_no_chosen"){
                     if(typeof path === "function"){
                         path();
                     } else {
-                        if(select_encounter(path)){
-                            window.location.href = path ? path :  window.location.href;
+                        let p = path ? path :  window.location.href;
+                        if(select_encounter(p)){
+                            window.location.href = p;
                         }
                     }
                     break;
@@ -219,6 +220,8 @@ function check_condition(conditions){
     return result;
 }
 
+enable_encounter = false;
+
 function math_sym_fn(math_sym){
     if(math_sym === "="){
         return function(value, val_check){
@@ -256,11 +259,17 @@ function math_sym_fn(math_sym){
         return function(value, val_check){
             return buffer_prev_choices.length > 0;
         }
+    } else if(math_sym === "_enable_encounter"){
+        return function(value, val_check){
+            enable_encounter = true;
+            return true;
+        }
     } else return null;
 }
 
 function select_encounter(prev_url){
     let is_found_encounter = true;
+    if(enable_encounter)
     for(const encounter_name in events_encounter){
         let encounter = events_encounter[encounter_name];
         if(check_condition(encounter['condition'])){
