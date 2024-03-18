@@ -123,7 +123,8 @@ choices_goblin = {
                     "detail":"[ กลับไปยังแคมป์ของเหล่ากองโจร ]", 
                     "paths":[ 
                         [ [["ศพของสมาชิกกองโจร", "=", 1, "and"],
-                            ["is_kill_all_thiefs", "=", 0]], url_path("92e88c7fc5357ac792a28cf2aa87c7e1")],
+                            ["is_kill_all_thiefs", "=", 0, "and"],
+                            ["find_missing_finish", "=", 0, "and"],], url_path("92e88c7fc5357ac792a28cf2aa87c7e1")],
                         
                         [ [["first_time_camp", "<=", 0]], url_path("14c9089484180a1fb343b9775c57971f")],
                         [ [["first_time_camp", ">", 0, "and"],
@@ -260,7 +261,8 @@ choices_goblin = {
                     "detail":"[ กลับไปยังแคมป์ของเหล่ากองโจร ]", 
                     "paths":[ 
                         [ [["ศพของสมาชิกกองโจร", "=", 1, "and"],
-                            ["is_kill_all_thiefs", "=", 0]], url_path("92e88c7fc5357ac792a28cf2aa87c7e1")],
+                            ["is_kill_all_thiefs", "=", 0, "and"],
+                            ["find_missing_finish", "=", 0, "and"],], url_path("92e88c7fc5357ac792a28cf2aa87c7e1")],
                         
                         [ [["first_time_camp", "<=", 0]], url_path("14c9089484180a1fb343b9775c57971f")],
                         [ [["first_time_camp", ">", 0, "and"],
@@ -329,7 +331,8 @@ choices_goblin = {
                     "detail":"[ กลับไปยังแคมป์ของเหล่ากองโจร ]", 
                     "paths":[ 
                         [ [["ศพของสมาชิกกองโจร", "=", 1, "and"],
-                            ["is_kill_all_thiefs", "=", 0]], url_path("92e88c7fc5357ac792a28cf2aa87c7e1")],
+                            ["is_kill_all_thiefs", "=", 0, "and"],
+                            ["find_missing_finish", "=", 0, "and"],], url_path("92e88c7fc5357ac792a28cf2aa87c7e1")],
                         
                         [ [["first_time_camp", "<=", 0]], url_path("14c9089484180a1fb343b9775c57971f")],
                         [ [["first_time_camp", ">", 0, "and"],
@@ -398,7 +401,8 @@ choices_goblin = {
                     "detail":"[ กลับไปยังแคมป์ของเหล่ากองโจร ]", 
                     "paths":[ 
                         [ [["ศพของสมาชิกกองโจร", "=", 1, "and"],
-                            ["is_kill_all_thiefs", "=", 0]], url_path("92e88c7fc5357ac792a28cf2aa87c7e1")],
+                            ["is_kill_all_thiefs", "=", 0, "and"],
+                            ["find_missing_finish", "=", 0, "and"],], url_path("92e88c7fc5357ac792a28cf2aa87c7e1")],
                         
                         [ [["first_time_camp", "<=", 0]], url_path("14c9089484180a1fb343b9775c57971f")],
                         [ [["first_time_camp", ">", 0, "and"],

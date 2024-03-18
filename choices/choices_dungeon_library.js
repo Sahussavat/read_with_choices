@@ -48,7 +48,7 @@ choices_dungeon_library = {
                             ["is_kill_all_thiefs", "=", 0]], url_path("855a2fd464258f5efdf00e66dfa24325")],
                         [ [["first_time_use_secret_way", "=", 0, "and"],
                             ["is_kill_all_thiefs", "=", 1]], url_path("678cafd0e2ddcb2eece6092a07bc1cc6")],
-                            
+
                         [[], "./index.html?select=use_secret_way"],
                     ],
                     "condition": [
@@ -194,7 +194,8 @@ choices_dungeon_library = {
                     "detail":"[ ต่อ ]", 
                     "paths":[
                         [ [["ศพของสมาชิกกองโจร", "=", 1, "and"],
-                            ["is_kill_all_thiefs", "=", 0]], url_path("92e88c7fc5357ac792a28cf2aa87c7e1")],
+                            ["is_kill_all_thiefs", "=", 0, "and"],
+                            ["find_missing_finish", "=", 0, "and"],], url_path("92e88c7fc5357ac792a28cf2aa87c7e1")],
                         
                         [ [["first_time_camp", "<=", 0]], url_path("14c9089484180a1fb343b9775c57971f")],
                         [ [["first_time_camp", ">", 0, "and"],
