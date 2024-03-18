@@ -39,10 +39,12 @@ function delete_save(save_target){
 }
 
 function create_save(save_name){
+    let params = new URL(window.location.href);
+    let param_save_prev_only = params.searchParams.get("save_prev_only");
     return {
         "save_name": save_name,
         "date": (new Date()).getTime(),
-        "current_page": window.location.href,
+        "current_page": param_save_prev_only ? document.referrer : window.location.href,
         "save_data": get_pure_val(),
         "buffer_prev_choices": buffer_prev_choices,
     };
@@ -60,6 +62,12 @@ function auto_save(path_save_url = ""){
     let auto_save_data = create_save(auto_save_txt);
     if(path_save_url){
         auto_save_data['current_page'] = path_save_url;
+    }
+    
+    let params = new URL(window.location.href);
+    let param_save_prev_only = params.searchParams.get("save_prev_only");
+    if(param_save_prev_only){
+        auto_save_data['current_page'] = document.referrer;
     }
     let save_list = get_save_list();
     let founded = false;

@@ -5,6 +5,8 @@ values_default = {
     https://sahussavat.github.io/read_with_choices/index.html?select=
     
     https://sahussavat.github.io/read_with_choices/next_page.html?page_id=
+
+    https://sahussavat.github.io/read_with_choices/save_page.html?save_page_id=
     */
     //========================================================================================
     "HP": {
