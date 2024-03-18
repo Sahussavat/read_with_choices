@@ -118,7 +118,7 @@ choices_potion_shop = {
                         [ [], "./index.html?choices=potions"],
                     ],
                     "condition": [
-                        ["thief_joined_party", "=", 1],
+                        ["thief_joined_party", "=", 1, "and"],
                         ["is_thief_steal_potion_yet", "=", 0]
                     ],
                     "results": [
