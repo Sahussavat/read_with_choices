@@ -211,17 +211,17 @@ choices_dungeon_library = {
                     ],
                     "results_w_condition":[
                         [ [["ศพของสมาชิกกองโจร", "=", 1, "and"],
-                        ["is_kill_all_thiefs", "=", 0]], ["find_missing_finish", "=", 1]],
-
-                        [ [["ศพของสมาชิกกองโจร", "=", 1, "and"],
-                        ["is_kill_all_thiefs", "=", 0]], ["ศพของสมาชิกกองโจร", "=", 0]],
-
-                        [ [["ศพของสมาชิกกองโจร", "=", 1, "and"],
                         ["is_kill_all_thiefs", "=", 0]], ["thief_joined_party", "=", 1]],
 
                         [ [["ศพของสมาชิกกองโจร", "=", 1, "and"],
                         ["find_missing_finish", "=", 0, "and"],
                         ["is_kill_all_thiefs", "=", 0]], ["how_good_can_fight", "+", 15]],
+
+                        [ [["ศพของสมาชิกกองโจร", "=", 1, "and"],
+                        ["is_kill_all_thiefs", "=", 0]], ["find_missing_finish", "=", 1]],
+
+                        [ [["ศพของสมาชิกกองโจร", "=", 1, "and"],
+                        ["is_kill_all_thiefs", "=", 0]], ["ศพของสมาชิกกองโจร", "=", 0]],
                         
                         [[["elf_joined_party", "=", 1, "and"],
                         ["thief_joined_party", "=", 1, "and"],], ["how_you_call_player", "=", "คุณกับพรรคพวก"]],
