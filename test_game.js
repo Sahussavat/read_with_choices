@@ -380,7 +380,7 @@ events_encounter = {
         "detail": "คุณได้เผชิญหน้ากับหมาป่ายักษ์",
         "encounter_url": "./index.html?select=which_way_to_meet_wolf",
         "condition": [["wolf_enable_to_attack","=", 1, "and"], ["","random", 50, "and"],],
-        "results": [[ "wolf_enable_to_attack", "=", 0 ], ["wolf_enable_to_attack_delay", "=", 1]],
+        "results": [[ "wolf_enable_to_attack", "=", 0 ], ["wolf_enable_to_attack_delay", "=", 2]],
     }
 }
 
