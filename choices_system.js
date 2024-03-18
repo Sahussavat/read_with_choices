@@ -110,6 +110,8 @@ function do_results(results){
             let value_change = turn_variable_name_to_value(result[2]);
             let sym = do_assign_fn(result[1]);
             values[result[0]]["current_val"] = sym(value, value_change);
+        } else if(result[1] === "_enable_encounter"){
+            enable_encounter = true;
         }
     }
     save_current_data();
@@ -127,8 +129,10 @@ function do_results_with_condition(results_w_con){
                 let value_change = turn_variable_name_to_value(res[2]);
                 let sym = do_assign_fn(res[1]);
                 values[res[0]]["current_val"] = sym(value, value_change);
+            } else if(res[1] === "_enable_encounter"){
+                enable_encounter = true;
             }
-        }
+        } 
     }
     save_current_data();
     auto_save();
@@ -172,7 +176,7 @@ function do_assign_fn(sym){
         return function(val_init, val_change){
             return val_init / val_change;
         }
-    }
+    } 
     else return null;
 }
 
@@ -258,11 +262,6 @@ function math_sym_fn(math_sym){
     } else if(math_sym === "_check_hav_prev"){
         return function(value, val_check){
             return buffer_prev_choices.length > 0;
-        }
-    } else if(math_sym === "_enable_encounter"){
-        return function(value, val_check){
-            enable_encounter = true;
-            return true;
         }
     } else return null;
 }
