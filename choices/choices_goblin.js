@@ -70,6 +70,7 @@ choices_goblin = {
                     ],
                     "results": [
                         ["is_kill_all_goblins", "=", 1],
+                        ["กระดูกก็อบลิน", "+", 3],
                     ],
                     "results_w_condition":[
                         [[["wolf_enable_to_attack", "=", 0, "and"],
