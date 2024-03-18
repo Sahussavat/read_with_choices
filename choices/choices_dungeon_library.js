@@ -33,7 +33,7 @@ choices_dungeon_library = {
                         [ [], "./index.html?choices=failed_find_secret_way"],
                     ],
                     "condition": [
-                        ["is_secret_way_opened", "=", 0, "and"]
+                        ["is_secret_way_opened", "=", 0, "and"],
                         ["is_failed_found_secret_way", "=", 0]
                     ],
                     "results": [
@@ -105,12 +105,12 @@ choices_dungeon_library = {
                     "paths":[ 
                         [ [["elf_joined_party", "<=", 0, "and"],
                         ["thief_joined_party", "<=", 0, "and"],
-                        ["is_kill_all_mimic", "<=", 0, "and"]
+                        ["is_kill_all_mimic", "<=", 0, "and"],
                         ["first_time_mimic", "<=", 0, "and"]], url_path("1d291f38d052dc8a2e960449969990df")],
                         
                         [ [["elf_joined_party", "<=", 0, "and"],
                         ["thief_joined_party", "<=", 0, "and"],
-                        ["is_kill_all_mimic", "<=", 0, "and"]
+                        ["is_kill_all_mimic", "<=", 0, "and"],
                         ["first_time_mimic", "=", 1, "and"]], url_path("940760d2e68e154f82263c5334523d71")],
                         
                         [ [["elf_joined_party", "=", 1, "and"],
