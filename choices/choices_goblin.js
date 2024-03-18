@@ -147,7 +147,7 @@ choices_goblin = {
                         ]],
                         
                         [[["elf_joined_party", "=", 1, "and"],
-                        ["thief_joined_party", "=", 1, "and"],], ["how_you_call_player", "=", "คุณกับพรรคพวก"]]
+                        ["thief_joined_party", "=", 1, "and"],], ["how_you_call_player", "=", "คุณกับพรรคพวก"]],
                         
                         [[["elf_joined_party", "=", 0, "and"],
                         ["thief_joined_party", "=", 1, "and"],], ["how_you_call_player", "=", "คุณกับหัวหน้ากองโจร"]]
@@ -284,7 +284,7 @@ choices_goblin = {
                         ]],
                         
                         [[["elf_joined_party", "=", 1, "and"],
-                        ["thief_joined_party", "=", 1, "and"],], ["how_you_call_player", "=", "คุณกับพรรคพวก"]]
+                        ["thief_joined_party", "=", 1, "and"],], ["how_you_call_player", "=", "คุณกับพรรคพวก"]],
                         
                         [[["elf_joined_party", "=", 0, "and"],
                         ["thief_joined_party", "=", 1, "and"],], ["how_you_call_player", "=", "คุณกับหัวหน้ากองโจร"]]
@@ -353,7 +353,7 @@ choices_goblin = {
                         ]],
                         
                         [[["elf_joined_party", "=", 1, "and"],
-                        ["thief_joined_party", "=", 1, "and"],], ["how_you_call_player", "=", "คุณกับพรรคพวก"]]
+                        ["thief_joined_party", "=", 1, "and"],], ["how_you_call_player", "=", "คุณกับพรรคพวก"]],
                         
                         [[["elf_joined_party", "=", 0, "and"],
                         ["thief_joined_party", "=", 1, "and"],], ["how_you_call_player", "=", "คุณกับหัวหน้ากองโจร"]]
@@ -422,7 +422,7 @@ choices_goblin = {
                         ]],
                         
                         [[["elf_joined_party", "=", 1, "and"],
-                        ["thief_joined_party", "=", 1, "and"],], ["how_you_call_player", "=", "คุณกับพรรคพวก"]]
+                        ["thief_joined_party", "=", 1, "and"],], ["how_you_call_player", "=", "คุณกับพรรคพวก"]],
                         
                         [[["elf_joined_party", "=", 0, "and"],
                         ["thief_joined_party", "=", 1, "and"],], ["how_you_call_player", "=", "คุณกับหัวหน้ากองโจร"]]

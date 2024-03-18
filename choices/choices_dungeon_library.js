@@ -20,7 +20,7 @@ choices_dungeon_library = {
                         ["is_corpse_clear", "=", 0]
                     ],
                     "results": [
-                        ["is_corpse_clear", "=", 1]
+                        ["is_corpse_clear", "=", 1],
                         ["ศพของสมาชิกกองโจร", "=", 1]
                     ]
                 },
@@ -216,7 +216,7 @@ choices_dungeon_library = {
                         ]],
                         
                         [[["elf_joined_party", "=", 1, "and"],
-                        ["thief_joined_party", "=", 1, "and"],], ["how_you_call_player", "=", "คุณกับพรรคพวก"]]
+                        ["thief_joined_party", "=", 1, "and"],], ["how_you_call_player", "=", "คุณกับพรรคพวก"]],
                         
                         [[["elf_joined_party", "=", 0, "and"],
                         ["thief_joined_party", "=", 1, "and"],], ["how_you_call_player", "=", "คุณกับหัวหน้ากองโจร"]]
