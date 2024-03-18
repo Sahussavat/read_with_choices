@@ -1,6 +1,7 @@
 
 function get_choices(choices_name, enable_choice_results = true){
     if(choices_name in data["choose_choices"]){
+        console.log(choices_name);
         var choices_all = data["choose_choices"][choices_name]['choices'];
         var choices_detail = data["choose_choices"][choices_name]['choices_detail'];
         choices_detail = find_and_replace_variable_text(choices_detail);
@@ -41,9 +42,13 @@ function get_choices(choices_name, enable_choice_results = true){
                     choice_btn.click(()=>{
                         choice_pass[2]();
                         let cp = choice_pass[1] ? choice_pass[1] :  window.location.href;
-                        auto_save(cp);
-                        if(select_encounter(cp)){
-                            window.location.href = cp;
+                        if(typeof cp === "function"){
+                            cp();
+                        } else {
+                            auto_save(cp);
+                            if(select_encounter(cp)){
+                                window.location.href = cp;
+                            }
                         }
                         choices_box.hide();
                     });
@@ -84,7 +89,11 @@ function select_path_when_enter(choices_name, chosen_name = "_no_chosen"){
                         console.log(choice, "12322");
                         do_results_with_condition(choice["results_w_condition"]);
                     }
-                    window.location.href = path ? path :  window.location.href;
+                    if(typeof path === "function"){
+                        path();
+                    } else {
+                        window.location.href = path ? path :  window.location.href;
+                    }
                     break;
                 }  
             };
@@ -182,6 +191,7 @@ function check_condition(conditions){
     var boolean_sym = "and";
     for(const condition of conditions){
         let value = 0;
+        console.log(condition);
         if(condition){
             if(condition[0] in values)
             {
@@ -251,14 +261,20 @@ function math_sym_fn(math_sym){
 }
 
 function select_encounter(prev_url){
+    let is_found_encounter = true;
     for(const encounter_name in events_encounter){
         let encounter = events_encounter[encounter_name];
         if(check_condition(encounter['condition'])){
             do_results(encounter['results']);
             add_to_buffer_prev(prev_url);
-            window.location.href = encounter['encounter_url'];
-            return false;
+            is_found_encounter = false;
+            if(typeof encounter['encounter_url'] === "function"){
+                encounter['encounter_url']();
+            } else {
+                window.location.href = encounter['encounter_url'];
+            }
+            break;
         }
     }
-    return true;
+    return is_found_encounter;
 }

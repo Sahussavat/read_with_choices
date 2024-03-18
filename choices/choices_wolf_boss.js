@@ -193,7 +193,7 @@ choices_wolf_boss = {
                     "nickname": "go_next",
                     "detail": "[ ไปต่อ ]",
                     "paths":[ 
-                        [ [["", "_check_hav_prev", 0]], go_to_prev_choice()],
+                        [ [["", "_check_hav_prev", 0]], go_to_prev_choice],
                     ],
                     "condition": [
                     ],
@@ -216,7 +216,7 @@ choices_wolf_boss = {
                     "nickname": "go_next",
                     "detail": "[ ไปต่อ ]",
                     "paths":[ 
-                        [ [["", "_check_hav_prev", 0]], go_to_prev_choice()],
+                        [ [["", "_check_hav_prev", 0]], go_to_prev_choice],
                     ],
                     "condition": [
                     ],
@@ -239,7 +239,7 @@ choices_wolf_boss = {
                     "nickname": "go_next",
                     "detail": "[ ไปต่อ ]",
                     "paths":[ 
-                        [ [["", "_check_hav_prev", 0]], go_to_prev_choice()],
+                        [ [["", "_check_hav_prev", 0]], go_to_prev_choice],
                     ],
                     "condition": [
                     ],
@@ -345,7 +345,7 @@ choices_wolf_boss = {
                     "nickname": "go_next",
                     "detail": "[ ไปต่อ ]",
                     "paths":[ 
-                        [ [["", "_check_hav_prev", 0]], go_to_prev_choice()],
+                        [ [["", "_check_hav_prev", 0]], go_to_prev_choice],
                     ],
                     "condition": [
                     ],
@@ -440,7 +440,7 @@ choices_wolf_boss = {
                     "nickname": "go_next",
                     "detail": "[ ไปต่อ ]",
                     "paths":[ 
-                        [ [["", "_check_hav_prev", 0]], go_to_prev_choice()],
+                        [ [["", "_check_hav_prev", 0]], go_to_prev_choice],
                     ],
                     "condition": [
                     ],
