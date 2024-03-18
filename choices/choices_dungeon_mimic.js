@@ -10,7 +10,7 @@ choices_dungeon_mimic = {
                 [[["wolf_enable_to_attack", "=", 0, "and"],
                 ["wolf_enable_to_attack_delay", "=", 0, "and"]], ["wolf_enable_to_attack", "=", 1]],
 
-                [[["wolf_enable_to_attack_delay", ">", 0, "and"],], ["wolf_enable_to_attack_delay", "-", 1]],
+                [[["wolf_enable_to_attack_delay", ">", 0, "and"],], ["wolf_enable_to_attack_delay", "-", 1]]
             ],
             "choices": [
                 {

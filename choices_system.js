@@ -74,12 +74,14 @@ function select_path_when_enter(choices_name, chosen_name = "_no_chosen"){
             }
             for(const choice_no in choices_all){
                 let choice = choices_all[choice_no];
+                if(choice)
                 if(check_condition(choice["condition"]) && chosen_name === "_no_chosen"
                     || check_condition(choice["condition"]) && chosen_name === choice["nickname"]){
                     
                     let path = get_select_path(choice["paths"]);
                     do_results(choice["results"]);
                     if("results_w_condition" in choice){
+                        console.log(choice, "12322");
                         do_results_with_condition(choice["results_w_condition"]);
                     }
                     window.location.href = path ? path :  window.location.href;
@@ -92,7 +94,7 @@ function select_path_when_enter(choices_name, chosen_name = "_no_chosen"){
 
 function do_results(results){
     for(const result of results){
-        if(result.length)
+        if(result)
         if(result[0] in values){
             let value = values[result[0]]["current_val"];
             let value_change = turn_variable_name_to_value(result[2]);
@@ -107,7 +109,7 @@ function do_results(results){
 
 function do_results_with_condition(results_w_con){
     for(const result of results_w_con){
-        if(result.length)
+        if(result)
         if(check_condition(result[0])){
             let res = result[1];
             if(res[0] in values){
