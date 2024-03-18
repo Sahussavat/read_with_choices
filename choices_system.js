@@ -92,6 +92,7 @@ function select_path_when_enter(choices_name, chosen_name = "_no_chosen"){
 
 function do_results(results){
     for(const result of results){
+        if(result.length)
         if(result[0] in values){
             let value = values[result[0]]["current_val"];
             let value_change = turn_variable_name_to_value(result[2]);
@@ -106,6 +107,7 @@ function do_results(results){
 
 function do_results_with_condition(results_w_con){
     for(const result of results_w_con){
+        if(result.length)
         if(check_condition(result[0])){
             let res = result[1];
             if(res[0] in values){
