@@ -231,6 +231,7 @@
         if(param_choices_name !== "new_game"){
             set_pure_val();
         }
+        if(!params.searchParams.get("save_page_id"))
         if(select_encounter("./index.html" + window.location.search)){
             if(param_choices_name)
             get_choices(param_choices_name);
