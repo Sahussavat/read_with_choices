@@ -54,6 +54,7 @@ choices_dungeon_camp = {
                     ],
                     "results": [
                         ["find_missing_start", "=", 1],
+                        ["ชะแลง", "=", 1],
                     ]
                 },
                 {
