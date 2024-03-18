@@ -182,28 +182,30 @@ function check_condition(conditions){
     var boolean_sym = "and";
     for(const condition of conditions){
         let value = 0;
-        if(condition[0] in values)
-        {
-            value = values[condition[0]]["current_val"];
-        }
-        let math_sym = math_sym_fn(condition[1]);
-        let val_check = turn_variable_name_to_value(condition[2]);
-        if(math_sym){
-            if(boolean_sym === "or"){
-                if(result) break; //if already true, return true.
-                else {
-                    result = true;
+        if(condition){
+            if(condition[0] in values)
+            {
+                value = values[condition[0]]["current_val"];
+            }
+            let math_sym = math_sym_fn(condition[1]);
+            let val_check = turn_variable_name_to_value(condition[2]);
+            if(math_sym){
+                if(boolean_sym === "or"){
+                    if(result) break; //if already true, return true.
+                    else {
+                        result = true;
+                        result &= math_sym(value, val_check);
+                    } 
+                } else if(boolean_sym === "and") {
                     result &= math_sym(value, val_check);
-                } 
-            } else if(boolean_sym === "and") {
-                result &= math_sym(value, val_check);
-            }
-            if(condition.length == 4){
-                boolean_sym = condition[3];
-            } else { 
-                break;
-            }
-        } else continue;
+                }
+                if(condition.length == 4){
+                    boolean_sym = condition[3];
+                } else { 
+                    break;
+                }
+            } else continue;
+        }
     }
     return result;
 }
