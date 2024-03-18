@@ -47,6 +47,7 @@ choices_dungeon_camp = {
                         [ [], url_path("f516dfe6938b32c243241860589f9b57")],
                     ],
                     "condition": [
+                        ["is_kill_all_thiefs", "=", 0, "and"],
                         ["first_time_camp", "=", 1, "and"],
                         ["find_missing_start", "=", 0, "and"],
                         ["find_missing_finish", "=", 0],
