@@ -67,7 +67,7 @@ choices_research_lab = {
             ],
         },
         "found_lab_door_again":{
-            "choices_detail":"คุณได้พบกับทางเดินซึ่งมีประตูสู่ห้องวิจัย คุณจะทำอย่างไร",
+            "choices_detail":"คุณได้พบกับทางเดินซึ่งมีประตูสู่ห้องวิจัย คุณจะทำอย่างไร?",
             "condition": [
             ],
             "results": [
@@ -101,6 +101,7 @@ choices_research_lab = {
                         [ [], url_path("523f8dbd4c0fca12f50aca4510a42401")],
                     ],
                     "condition": [
+                        ["found_back_story", "=", 0],
                         ["is_lab_door_opened", "=", 1],
                         ["elf_joined_party", "=", 1],
                     ],
