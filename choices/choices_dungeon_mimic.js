@@ -103,6 +103,27 @@ choices_dungeon_mimic = {
                 },
             ],
         },
+        "kill_with_know_mimic":{
+            "choices_detail":"คุณได้ลอบสังหาร Mimic",
+            "condition": [
+            ],
+            "results": [
+            ],
+            "choices": [
+                {
+                    "detail":"[ สู้ ]", 
+                    "paths":[ 
+                        [ [], url_path("c8f74783d05dcb8f681ad1eaa6386139")],
+                    ],
+                    "condition": [
+                    ],
+                    "results": [
+                        ["is_kill_all_mimic", "=", 1],
+                        ["Health Potion", "+", 5],
+                    ]
+                },
+            ],
+        },
         //=========================================================================================
         "fight_mimic":{
             "choices_detail":"เทิร์นหลบการโจมตี Mimic",
