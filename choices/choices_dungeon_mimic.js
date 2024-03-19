@@ -33,8 +33,6 @@ choices_dungeon_mimic = {
                         ["is_kill_all_mimic", "=", 0],
                     ],
                     "results": [
-                        ["is_kill_all_mimic", "=", 1],
-                        ["Health Potion", "+", 5],
                     ]
                 },
                 {
