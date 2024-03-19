@@ -42,7 +42,7 @@ choices_choose_ability = {
             ],
         },
         "choose_ability_point_not_out":{
-            "choices_detail":"โปรดเลือกทักษะพื้นฐานของตัวละครที่ช่อง Item [\"โปรดใช้แต้ม Point ให้หมดก่อนเริ่ม\"]",
+            "choices_detail":"โปรดเลือกทักษะพื้นฐานของตัวละครที่ช่อง Item [\"โปรดใช้แต้ม Ability ให้หมดก่อนเริ่ม\"]",
             "condition": [
             ],
             "results": [
