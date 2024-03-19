@@ -1,7 +1,7 @@
 choices_dungeon_mimic = {
     "choose_choices":{
         "meet_mimic":{
-            "choices_detail":"คุณเลือกจะทำอย่างไรกับกล่องปริศนาตรงหน้า?",
+            "choices_detail":"คุณได้เดินทางจนมาเจอกับกล่องปริศนาอยู่ตรงหน้า คุณเลือกจะทำอย่างไร?",
             "condition": [
             ],
             "results": [
@@ -22,9 +22,15 @@ choices_dungeon_mimic = {
                     "nickname":"examine",
                     "detail":"[ ตรวจสอบ ]", 
                     "paths":[ 
-                        [ [], url_path("1e8f79f8b669533f0d8877a0e44ab5a5")],
+
+                        [ [["how_good_can_you_see", "=", 1, "or"],
+                        ["", "random", 50],], "./index.html?select=success_examine_mimic"],
+
+                        [ [], "./index.html?choices=failed_examine_mimic"],
                     ],
                     "condition": [
+                        ["is_failed_examine_mimic", "=", 0, "and"],
+                        ["is_kill_all_mimic", "=", 0],
                     ],
                     "results": [
                         ["is_kill_all_mimic", "=", 1],
@@ -116,11 +122,113 @@ choices_dungeon_mimic = {
                         [ [], url_path("c8f74783d05dcb8f681ad1eaa6386139")],
                     ],
                     "condition": [
+                        ["is_failed_examine_mimic", "=", 0],
                     ],
                     "results": [
                         ["is_kill_all_mimic", "=", 1],
                         ["Health Potion", "+", 5],
                     ]
+                },
+            ],
+        },
+        "failed_examine_mimic":{
+            "choices_detail":"คุณไม่พบความผิดปกติใดๆกับกล่องใบนี้",
+            "condition": [
+            ],
+            "results": [
+            ],
+            "choices": [
+                {
+                    "detail":"[ ต่อ ]", 
+                    "paths":[ 
+                        [ [], url_path("693e69b499c6643254c24556070fccdd")],
+                    ],
+                    "condition": [
+                    ],
+                    "results": [
+                        ["is_failed_examine_mimic", "=", 1],
+                    ]
+                },
+            ],
+        },
+        "success_examine_mimic":{
+            "choices_detail":"คุณได้พบว่ากล่องนี้คือ Mimic แล้วได้ลอบสังหารมัน",
+            "condition": [
+            ],
+            "results": [
+            ],
+            "choices": [
+                {
+                    "detail":"[ ต่อ ]", 
+                    "paths":[ 
+                        [ [], url_path("1e8f79f8b669533f0d8877a0e44ab5a5")],
+                    ],
+                    "condition": [
+                        ["is_kill_all_mimic", "=", 0],
+                    ],
+                    "results": [
+                        ["is_kill_all_mimic", "=", 1],
+                        ["Health Potion", "+", 5],
+                    ]
+                },
+            ],
+        },
+        //=========================================================================================
+        "which_way_mimic":{
+            "choices_detail":"คุณได้เดินทางจนมาพบเข้ากับอะไรบางอย่าง",
+            "condition": [
+            ],
+            "results": [
+            ],
+            "choices": [
+                {
+                    "detail":"[ ต่อ ]", 
+                    "paths":[ 
+                        [ [["elf_joined_party", "<=", 0, "and"],
+                        ["thief_joined_party", "<=", 0, "and"],
+                        ["is_kill_all_mimic", "<=", 0, "and"]
+                        ["first_time_mimic", "<=", 0, "and"]], url_path("1d291f38d052dc8a2e960449969990df")],
+                        
+                        [ [["elf_joined_party", "<=", 0, "and"],
+                        ["thief_joined_party", "<=", 0, "and"],
+                        ["is_kill_all_mimic", "<=", 0, "and"]
+                        ["first_time_mimic", "=", 1, "and"]], url_path("940760d2e68e154f82263c5334523d71")],
+                        
+                        [ [["elf_joined_party", "=", 1, "and"],
+                        ["thief_joined_party", "<=", 0, "and"],
+                        ["is_kill_all_mimic", "<=", 0, "and"]], url_path("fea9a0554d006843b48fe89195724dbe")],
+                        
+                        [ [["elf_joined_party", "<=", 0, "and"],
+                        ["thief_joined_party", "=", 1, "and"],
+                        ["is_kill_all_mimic", "<=", 0, "and"]], url_path("06ca8be73cf4d8f0118eef889afd3720")],
+                        
+                        [ [["elf_joined_party", "=", 1, "and"],
+                        ["thief_joined_party", "=", 1, "and"],
+                        ["is_kill_all_mimic", "<=", 0, "and"]], url_path("17b66445c414698eb9542131f3002967")],
+                        
+                        [ [["is_kill_all_mimic", "=", 1, "and"]], url_path("fc2ad73f7fc7c13ab7a04e525c4f550e")],
+                    ],
+                    "condition": [
+                    ],
+                    "results": [
+                        ["first_time_mimic", "=", 1],
+                    ],
+                    "results_w_condition":[
+                        
+                        [ [["elf_joined_party", "<=", 0, "and"],
+                        ["thief_joined_party", "=", 1, "and"],
+                        ["is_kill_all_mimic", "<=", 0, "and"]], ["Health Potion", "+", 5]],
+                        [ [["elf_joined_party", "<=", 0, "and"],
+                        ["thief_joined_party", "=", 1, "and"],
+                        ["is_kill_all_mimic", "<=", 0, "and"]], ["is_kill_all_mimic", "=", 1]],
+                        
+                        [ [["elf_joined_party", "=", 1, "and"],
+                        ["thief_joined_party", "=", 1, "and"],
+                        ["is_kill_all_mimic", "<=", 0, "and"]], ["Health Potion", "+", 5]],
+                        [ [["elf_joined_party", "=", 1, "and"],
+                        ["thief_joined_party", "=", 1, "and"],
+                        ["is_kill_all_mimic", "<=", 0, "and"]], ["is_kill_all_mimic", "=", 1]],
+                    ],
                 },
             ],
         },
@@ -196,6 +304,7 @@ choices_dungeon_mimic = {
             "choices_detail":"\\v[how_you_call_player]ได้ต่อกรกับ Mimic แล้วสังหารมันได้ แต่คุณก็อยู่ในสภาพที่ปางตาย"
             +" คุณฝืนประคองตนเองไม้ให้ล้มลงไปในนอนกับพื้น แล้วพยายามกลั้นความเจ็บปวดพวกนั้นเอาไว้  [ได้รับ Health Potion x5]",
             "condition": [
+                ["is_kill_all_mimic", "=", 0],
             ],
             "results": [
                 ["is_kill_all_mimic", "=", 1],
@@ -258,6 +367,7 @@ choices_dungeon_mimic = {
             "choices_detail":"\\v[how_you_call_player]ได้ต่อกรกับ Mimic แล้วสังหารมันได้ ถึงแม้ว่าจะถูกโจมตีเข้ามาอยู่บ้าง"
             +" แต่คุณก็ไม่ได้รู้สึกว่าบาดแผลที่ได้รับมานั้นจะเป็นปัญหาสักเท่าไหร่  [ได้รับ Health Potion x5]",
             "condition": [
+                ["is_kill_all_mimic", "=", 0],
             ],
             "results": [
                 ["is_kill_all_mimic", "=", 1],
@@ -319,6 +429,7 @@ choices_dungeon_mimic = {
         "results_fight_mimic_perfect":{
             "choices_detail":"\\v[how_you_call_player]ได้ต่อกรกับ Mimic แล้วสังหารมันได้โดยไม่มีบาดแผลแม้แต่นิดเดียว [ได้รับ Health Potion x5]",
             "condition": [
+                ["is_kill_all_mimic", "=", 0],
             ],
             "results": [
                 ["is_kill_all_mimic", "=", 1],

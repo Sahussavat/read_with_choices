@@ -230,6 +230,11 @@ values_default = {
         "type": "value",
         "show": false,
     },
+    "is_failed_examine_mimic": {
+        "current_val": 0,
+        "type": "value",
+        "show": false,
+    },
     "is_secret_way_opened": {
         "current_val": 0,
         "type": "value",

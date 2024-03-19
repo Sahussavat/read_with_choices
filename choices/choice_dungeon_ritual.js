@@ -118,7 +118,7 @@ choice_dungeon_ritual = {
             ],
         },
         "results_fight_final_almost_died":{
-            "choices_detail":"\\v[how_you_call_player]พยายามที่จะถ่วงเวลา แต่คุณก็อยู่ในสภาพที่ร่อแร่เต็มทีแล้ว",
+            "choices_detail":"\\v[how_you_call_player]พยายามที่จะถ่วงเวลา แต่คุณก็อยู่ในสภาพที่หมดแรงเต็มทีแล้ว",
             "condition": [
             ],
             "results": [

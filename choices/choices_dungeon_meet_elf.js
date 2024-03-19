@@ -31,34 +31,11 @@ choices_dungeon_meet_elf = {
                     "nickname":"ignore",
                     "detail": "[ ไม่สนใจแล้วเดินทางไปต่อ ]",
                     "paths":[ 
-                        [ [["elf_joined_party", "<=", 0, "and"],
-                        ["thief_joined_party", "<=", 0, "and"],
-                        ["is_kill_all_mimic", "<=", 0, "and"]
-                        ["first_time_mimic", "<=", 0, "and"]], url_path("1d291f38d052dc8a2e960449969990df")],
-                        
-                        [ [["elf_joined_party", "<=", 0, "and"],
-                        ["thief_joined_party", "<=", 0, "and"],
-                        ["is_kill_all_mimic", "<=", 0, "and"]
-                        ["first_time_mimic", "=", 1, "and"]], url_path("940760d2e68e154f82263c5334523d71")],
-                        
-                        [ [["elf_joined_party", "=", 1, "and"],
-                        ["thief_joined_party", "<=", 0, "and"],
-                        ["is_kill_all_mimic", "<=", 0, "and"]], url_path("fea9a0554d006843b48fe89195724dbe")],
-                        
-                        [ [["elf_joined_party", "<=", 0, "and"],
-                        ["thief_joined_party", "=", 1, "and"],
-                        ["is_kill_all_mimic", "<=", 0, "and"]], url_path("06ca8be73cf4d8f0118eef889afd3720")],
-                        
-                        [ [["elf_joined_party", "=", 1, "and"],
-                        ["thief_joined_party", "=", 1, "and"],
-                        ["is_kill_all_mimic", "<=", 0, "and"]], url_path("17b66445c414698eb9542131f3002967")],
-                        
-                        [ [["is_kill_all_mimic", "=", 1, "and"]], url_path("fc2ad73f7fc7c13ab7a04e525c4f550e")],
+                        [ [], "./index.html?select=which_way_mimic"],
                     ],
                     "condition": [
                     ],
                     "results": [
-                        ["first_time_mimic", "=", 1],
                     ],
                     "results_w_condition":[
                         [[["wolf_enable_to_attack", "=", 0, "and"],
@@ -108,34 +85,11 @@ choices_dungeon_meet_elf = {
                     "nickname":"go_next",
                     "detail":"[ ไปต่อ ]", 
                     "paths":[ 
-                        [ [["elf_joined_party", "<=", 0, "and"],
-                        ["thief_joined_party", "<=", 0, "and"],
-                        ["is_kill_all_mimic", "<=", 0, "and"]
-                        ["first_time_mimic", "<=", 0, "and"]], url_path("1d291f38d052dc8a2e960449969990df")],
-                        
-                        [ [["elf_joined_party", "<=", 0, "and"],
-                        ["thief_joined_party", "<=", 0, "and"],
-                        ["is_kill_all_mimic", "<=", 0, "and"]
-                        ["first_time_mimic", "=", 1, "and"]], url_path("940760d2e68e154f82263c5334523d71")],
-                        
-                        [ [["elf_joined_party", "=", 1, "and"],
-                        ["thief_joined_party", "<=", 0, "and"],
-                        ["is_kill_all_mimic", "<=", 0, "and"]], url_path("fea9a0554d006843b48fe89195724dbe")],
-                        
-                        [ [["elf_joined_party", "<=", 0, "and"],
-                        ["thief_joined_party", "=", 1, "and"],
-                        ["is_kill_all_mimic", "<=", 0, "and"]], url_path("06ca8be73cf4d8f0118eef889afd3720")],
-                        
-                        [ [["elf_joined_party", "=", 1, "and"],
-                        ["thief_joined_party", "=", 1, "and"],
-                        ["is_kill_all_mimic", "<=", 0, "and"]], url_path("17b66445c414698eb9542131f3002967")],
-                        
-                        [ [["is_kill_all_mimic", "=", 1, "and"]], url_path("fc2ad73f7fc7c13ab7a04e525c4f550e")],
+                        [ [], "./index.html?select=which_way_mimic"],
                     ],
                     "condition": [
                     ],
                     "results": [
-                        ["first_time_mimic", "=", 1],
                     ],
                     "results_w_condition":[
                         [[["wolf_enable_to_attack", "=", 0, "and"],

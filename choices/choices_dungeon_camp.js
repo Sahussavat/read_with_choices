@@ -179,6 +179,7 @@ choices_dungeon_camp = {
             +" คุณฝืนประคองตนเองไม้ให้ล้มลงไปในนอนกับพื้น แล้วพยายามกลั้นความเจ็บปวดพวกนั้นเอาไว้"+
             " [ได้รับ Health Potion x3, ได้รับชะแลง x1]",
             "condition": [
+                ["is_kill_all_thiefs", "=", 0],
             ],
             "results": [
                 ["is_kill_all_thiefs", "=", 1],
@@ -218,6 +219,7 @@ choices_dungeon_camp = {
             +" แต่คุณก็ไม่ได้รู้สึกว่าบาดแผลที่ได้รับมานั้นจะเป็นปัญหาสักเท่าไหร่"+
             " [ได้รับ Health Potion x3, ได้รับชะแลง x1]",
             "condition": [
+                ["is_kill_all_thiefs", "=", 0],
             ],
             "results": [
                 ["is_kill_all_thiefs", "=", 1],
@@ -256,6 +258,7 @@ choices_dungeon_camp = {
             "choices_detail":"คุณได้ต่อกรกับพวกกองโจร แล้วสังหารพวกมันทุกคนจนหมดโดยไม่มีบาดแผลแม้แต่นิดเดียว"+
             " [ได้รับ Health Potion x3, ได้รับชะแลง x1]",
             "condition": [
+                ["is_kill_all_thiefs", "=", 0],
             ],
             "results": [
                 ["is_kill_all_thiefs", "=", 1],

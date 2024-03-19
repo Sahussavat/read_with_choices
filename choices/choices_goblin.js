@@ -67,6 +67,7 @@ choices_goblin = {
                         [ [], url_path("636cb7d3ef567f8288379f47193142e3")],
                     ],
                     "condition": [
+                        ["is_kill_all_goblins", "=", 0],
                     ],
                     "results": [
                         ["is_kill_all_goblins", "=", 1],
@@ -233,6 +234,7 @@ choices_goblin = {
             "choices_detail":"\\v[how_you_call_player]ได้ต่อกรกับพวกก็อบลิน แล้วสังหารพวกมันทุกตัวจนหมด แต่คุณก็อยู่ในสภาพที่ปางตาย"
             +" คุณฝืนประคองตนเองไม้ให้ล้มลงไปในนอนกับพื้น แล้วพยายามกลั้นความเจ็บปวดพวกนั้นเอาไว้ [ได้รับกระดูกก็อบลิน x3]",
             "condition": [
+                ["is_kill_all_goblins", "=", 0],
             ],
             "results": [
                 ["is_kill_all_goblins", "=", 1],
@@ -307,6 +309,7 @@ choices_goblin = {
             "choices_detail":"\\v[how_you_call_player]ได้ต่อกรกับพวกก็อบลิน แล้วสังหารพวกมันทุกตัวจนหมด ถึงแม้ว่าจะถูกโจมตีเข้ามาอยู่บ้าง"
             +" แต่คุณก็ไม่ได้รู้สึกว่าบาดแผลที่ได้รับมานั้นจะเป็นปัญหาสักเท่าไหร่  [ได้รับกระดูกก็อบลิน x3]",
             "condition": [
+                ["is_kill_all_goblins", "=", 0],
             ],
             "results": [
                 ["is_kill_all_goblins", "=", 1],
@@ -381,6 +384,7 @@ choices_goblin = {
             "choices_detail":"\\v[how_you_call_player]ได้ต่อกรกับพวกก็อบลิน แล้วสังหารพวกมันทุกตัวจนหมดโดยไม่มีบาดแผลแม้แต่นิดเดียว"
             +"  [ได้รับกระดูกก็อบลิน x3]",
             "condition": [
+                ["is_kill_all_goblins", "=", 0],
             ],
             "results": [
                 ["is_kill_all_goblins", "=", 1],
