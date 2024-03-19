@@ -124,8 +124,11 @@ choices_dungeon_mimic = {
                         ["is_failed_examine_mimic", "=", 0],
                     ],
                     "results": [
-                        ["is_kill_all_mimic", "=", 1],
-                        ["Health Potion", "+", 5],
+                    ],
+                    "results_w_condition":[
+
+                        [[["is_kill_all_mimic", "=", 0]], ["Health Potion", "+", 5]],
+                        [[], ["is_kill_all_mimic", "=", 1]],
                     ]
                 },
             ],
@@ -163,11 +166,13 @@ choices_dungeon_mimic = {
                         [ [], url_path("1e8f79f8b669533f0d8877a0e44ab5a5")],
                     ],
                     "condition": [
-                        ["is_kill_all_mimic", "=", 0],
                     ],
                     "results": [
-                        ["is_kill_all_mimic", "=", 1],
-                        ["Health Potion", "+", 5],
+                    ],
+                    "results_w_condition":[
+
+                        [[["is_kill_all_mimic", "=", 0]], ["Health Potion", "+", 5]],
+                        [[], ["is_kill_all_mimic", "=", 1]],
                     ]
                 },
             ],

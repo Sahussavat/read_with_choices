@@ -49,6 +49,50 @@ choice_dungeon_ritual = {
                     "results": [
                     ]
                 },
+                {
+                    "detail":"[ เดินย้อนกลับ ]", 
+                    "paths":[ 
+                        [ [["first_time_lab", "=", 0, "and"],
+                        ["is_lab_door_opened", "=", 0, "and"],
+                        ["found_back_story", "=", 0, "and"],
+                        ["elf_joined_party", "=", 0, "and"],
+                        ["thief_joined_party", "=", 0, "and"],], url_path("b718972ebbef053d7a3df0c245176933")],
+                        
+                        [ [["first_time_lab", "=", 0, "and"],
+                        ["is_lab_door_opened", "=", 0, "and"],
+                        ["found_back_story", "=", 0, "and"],
+                        ["elf_joined_party", "=", 1, "and"],
+                        ["thief_joined_party", "=", 0, "and"],], url_path("d36ab037ffaa16166912aadbeaddaa2d")],
+                        
+                        [ [["first_time_lab", "=", 0, "and"],
+                        ["is_lab_door_opened", "=", 0, "and"],
+                        ["found_back_story", "=", 0, "and"],
+                        ["elf_joined_party", "=", 1, "and"],
+                        ["thief_joined_party", "=", 0, "and"],], url_path("2cbbdf4aed20e2385d37e3ac7f453595")],
+                        
+                        [ [["first_time_lab", "=", 0, "and"],
+                        ["is_lab_door_opened", "=", 0, "and"],
+                        ["found_back_story", "=", 0, "and"],
+                        ["elf_joined_party", "=", 1, "and"],
+                        ["thief_joined_party", "=", 1, "and"],], url_path("650d811a059f6afcd8627e9756a32125")],
+                        
+                        [ [["first_time_lab", "=", 1, "and"],
+                        ["is_lab_door_opened", "=", 0, "and"],], url_path("852a76faeee84556db7148808e89404f")],
+                        
+                        [ [["first_time_lab", "=", 1, "and"],
+                        ["is_lab_door_opened", "=", 1, "and"],
+                        ["found_back_story", "=", 1, "and"],], url_path("7453793eaf83282fb109b70587451ea7")],
+
+                        [ [["first_time_lab", "=", 1, "and"],
+                        ["is_lab_door_opened", "=", 1, "and"],
+                        ["found_back_story", "=", 0, "and"],], url_path("8e6a8482e8f252b167b0f552511a4894")],
+                    ],
+                    "condition": [
+                    ],
+                    "results": [
+                        ["first_time_lab", "=", 1],
+                    ]
+                },
             ],
         },
         //=========================================================================================================
