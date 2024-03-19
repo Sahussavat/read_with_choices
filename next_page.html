@@ -28,6 +28,6 @@
     let params = new URL(window.location.href);
     let param_page_id = params.searchParams.get("page_id");
     auto_save(url_path(param_page_id));
-    window.location.href = url_path(param_page_id);
+    window.location.replace(url_path(param_page_id));
 </script>
 </html>

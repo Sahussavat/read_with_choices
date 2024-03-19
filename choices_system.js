@@ -46,7 +46,7 @@ function get_choices(choices_name, enable_choice_results = true){
                         } else {
                             auto_save(cp);
                             if(select_encounter(cp)){
-                                window.location.href = cp;
+                                window.location.replace(cp);
                             }
                         }
                         choices_box.hide();
@@ -92,7 +92,7 @@ function select_path_when_enter(choices_name, chosen_name = "_no_chosen"){
                     } else {
                         let p = path ? path :  window.location.href;
                         if(select_encounter(p)){
-                            window.location.href = p;
+                            window.location.replace(p);
                         }
                     }
                     break;
@@ -278,7 +278,7 @@ function select_encounter(prev_url){
             if(typeof encounter['encounter_url'] === "function"){
                 encounter['encounter_url']();
             } else {
-                window.location.href = encounter['encounter_url'];
+                window.location.replace(encounter['encounter_url']);
             }
             break;
         }
