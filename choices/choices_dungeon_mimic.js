@@ -185,12 +185,12 @@ choices_dungeon_mimic = {
                     "paths":[ 
                         [ [["elf_joined_party", "<=", 0, "and"],
                         ["thief_joined_party", "<=", 0, "and"],
-                        ["is_kill_all_mimic", "<=", 0, "and"]
+                        ["is_kill_all_mimic", "<=", 0, "and"],
                         ["first_time_mimic", "<=", 0, "and"]], url_path("1d291f38d052dc8a2e960449969990df")],
                         
                         [ [["elf_joined_party", "<=", 0, "and"],
                         ["thief_joined_party", "<=", 0, "and"],
-                        ["is_kill_all_mimic", "<=", 0, "and"]
+                        ["is_kill_all_mimic", "<=", 0, "and"],
                         ["first_time_mimic", "=", 1, "and"]], url_path("940760d2e68e154f82263c5334523d71")],
                         
                         [ [["elf_joined_party", "=", 1, "and"],
