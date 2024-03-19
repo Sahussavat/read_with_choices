@@ -17,6 +17,9 @@
 <body>
     <!-- =============================================================================================== -->
     <!-- Modal -->
+    <button id="back_btn" style="display: none;" class="btn btn-primary" onclick="history.back()">
+        ย้อนกลับ
+    </button>
     <button type="button" class="btn btn-primary" onclick="
         show_save_list();
         $('#save_list_modal').modal('toggle');
@@ -266,6 +269,13 @@
 <script src="./abilities.js" charset="utf-8"></script>
 <script src="./test_game.js" charset="utf-8"></script>
 <script>
+    $(document).ready(()=>{
+        let params = new URL(window.location.href);
+        if(params.searchParams.get("save_page_id")){
+            $("#back_btn").show();
+        }
+    });
+
     function start(){
         let params = new URL(window.location.href);
         let param_choices_name = params.searchParams.get("choices");
@@ -275,7 +285,6 @@
             set_pure_val();
         }
         if(!params.searchParams.get("save_page_id"))
-
         if(param_choices_name)
             get_choices(param_choices_name);
         else if(param_select_name){

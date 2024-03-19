@@ -17,7 +17,8 @@ choices_dungeon_library = {
                         [ [], url_path("242b973a72d483bf91767d7b9fbbe517")],
                     ],
                     "condition": [
-                        ["is_corpse_clear", "=", 0]
+                        ["is_corpse_clear", "=", 0, "and"],
+                        ["is_kill_all_thiefs", "=", 0]
                     ],
                     "results": [
                         ["is_corpse_clear", "=", 1],
