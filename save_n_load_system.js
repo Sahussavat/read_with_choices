@@ -221,12 +221,22 @@ function show_save_list(){
         let card_save_body = $('<div>', {"class": "card-body"});
         let delete_button = $('<button>', {
             "class": "btn btn-danger",
-            "style": "margin-left: 90%;"}).html("ลบ").click(()=>{
+            "style": "margin-left: 5%;"}).html("ลบ").click(()=>{
             $("#delete_save").modal("toggle");
             $('#save_list_modal').modal('toggle');
 
             $("#delete_save_label").html("ต้องการลบเซฟ "+save_data['save_name']+" หรือไม่?");
             $("#delete_save_confirm_btn").data({"save_data": save_data});
+        });
+        let rename_button = $('<button>', {
+            "class": "btn btn-primary",
+            "style": "margin-left: 15%;"}).html("เปลี่ยนชื่อ").click(()=>{
+            $("#re_name_save").modal("toggle");
+            $('#save_list_modal').modal('toggle');
+
+            $('#re_name_save_name_input').val(save_data['save_name']);
+            $("#re_name_save_label").html("ต้องการเปลี่ยนชื่อเซฟ "+save_data['save_name']+" หรือไม่?");
+            $("#re_name_save_confirm_btn").data({"save_data": save_data});
         });
         card_save.append(card_save_body);
         let card_save_inside_body = $("<div>", {"style": "cursor: pointer;"})
@@ -234,6 +244,7 @@ function show_save_list(){
             $("#overwrite_save").modal("toggle");
             $('#save_list_modal').modal('toggle');
 
+            $('#overwrite_save_name_input').val(save_data['save_name']);
             $("#overwrite_save_label").html("ต้องการทับเซฟ "+save_data['save_name']+" หรือไม่?");
             $("#overwrite_save_confirm_btn").data({"save_data": save_data});
         });
@@ -242,7 +253,9 @@ function show_save_list(){
         card_save_inside_body.append($('<h4>', {"class": "card-title"}).html(save_data['save_name']));
         card_save_inside_body.append($('<p>', {"class": "card-text"}).html(new Date(save_data['date'])));
         
+        card_save_body.append($('<br>'));
         card_save_body.append(delete_button);
+        card_save_body.append(rename_button);
 
         save_box.append(card_save);
         save_box.append($('<br>'));
