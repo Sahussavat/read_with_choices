@@ -181,7 +181,7 @@ function show_load_save_list(){
     for(let save_data_no in save_list_tmp){
         let save_data = save_list_tmp[save_data_no];
 
-        let card_save = $('<div>', {"class": "card"})
+        let card_save = $('<div>', {"class": "card", "style":"font-size: 18px;"})
         .data({"save_data": save_data});
         let card_save_body = $('<div>', {"class": "card-body"});
         let delete_button = $('<button>', {
@@ -218,7 +218,7 @@ function show_save_list(){
     for(let save_data_no in save_list_tmp){
         let save_data = save_list_tmp[save_data_no];
 
-        let card_save = $('<div>', {"class": "card"}).data({"save_data": save_data});
+        let card_save = $('<div>', {"class": "card", "style":"font-size: 18px;"}).data({"save_data": save_data});
         let card_save_body = $('<div>', {"class": "card-body"});
         let delete_button = $('<button>', {
             "class": "btn btn-danger",
