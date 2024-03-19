@@ -67,18 +67,18 @@ choices_goblin = {
                         [ [], url_path("636cb7d3ef567f8288379f47193142e3")],
                     ],
                     "condition": [
-                        ["is_kill_all_goblins", "=", 0],
                     ],
                     "results": [
-                        ["is_kill_all_goblins", "=", 1],
-                        ["กระดูกก็อบลิน", "+", 3],
                     ],
                     "results_w_condition":[
                         [[["wolf_enable_to_attack", "=", 0, "and"],
                         ["wolf_enable_to_attack_delay", "=", 0, "and"]], ["wolf_enable_to_attack", "=", 1]],
 
                         [[["wolf_enable_to_attack_delay", ">", 0, "and"],], ["wolf_enable_to_attack_delay", "-", 1]],
-                        [[], ["", "_enable_encounter", 0]]
+                        [[], ["", "_enable_encounter", 0]],
+
+                        [[["is_kill_all_goblins", "=", 1]], ["กระดูกก็อบลิน", "+", 3]],
+                        [[], ["is_kill_all_goblins", "=", 1]],
                     ],
                 },
             ],
