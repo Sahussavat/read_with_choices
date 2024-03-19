@@ -14,6 +14,7 @@ choices_dungeon_mimic = {
                         [ [], url_path("3e2c81ad56eb22d36c3b0053493d6fdd")],
                     ],
                     "condition": [
+                        ["is_kill_all_mimic", "=", 0],
                     ],
                     "results": [
                     ]
