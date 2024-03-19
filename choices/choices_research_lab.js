@@ -30,6 +30,29 @@ choices_research_lab = {
                     ],
                 },
                 {
+                    "detail":"[ ยืมชะแลงจากหัวหน้าโจรมางัดประตู ]", 
+                    "paths":[ 
+                        [ [["elf_joined_party", "=", 0, "and"],
+                        ["thief_joined_party", "=", 0, "and"],], url_path("044ffbc26df84c866dc04453a71d928a")],
+                        
+                        [ [["elf_joined_party", "=", 0, "and"],
+                        ["thief_joined_party", "=", 1, "and"],], url_path("c28f77927b81d34de265336faf85ce41")],
+                        
+                        [ [["elf_joined_party", "=", 1, "and"]], url_path("bedd9141e99d73a79f20dfa536c23423")],
+                    ],
+                    "condition": [
+                        ["thief_joined_party", "=", 1, "and"],
+                        ["ชะแลง", "=", 0, "and"],
+                        ["is_lab_door_opened", "=", 0],
+                    ],
+                    "results": [
+                        ["is_lab_door_opened", "=", 1],
+                    ],
+                    "results_w_condition":[
+                        [ [["elf_joined_party", "=", 1, "and"]], ["found_back_story", "=", 1]],
+                    ],
+                },
+                {
                     "detail":"[ ไม่สนใจแล้วไปต่อ ]", 
                     "paths":[ 
                         [ [["elf_joined_party", "=", 0, "and"],
@@ -86,6 +109,29 @@ choices_research_lab = {
                     ],
                     "condition": [
                         ["ชะแลง", ">=", 1, "and"],
+                        ["is_lab_door_opened", "=", 0],
+                    ],
+                    "results": [
+                        ["is_lab_door_opened", "=", 1],
+                    ],
+                    "results_w_condition":[
+                        [ [["elf_joined_party", "=", 1, "and"]], ["found_back_story", "=", 1]],
+                    ],
+                },
+                {
+                    "detail":"[ ยืมชะแลงจากหัวหน้าโจรมางัดประตู ]", 
+                    "paths":[ 
+                        [ [["elf_joined_party", "=", 0, "and"],
+                        ["thief_joined_party", "=", 0, "and"],], url_path("044ffbc26df84c866dc04453a71d928a")],
+                        
+                        [ [["elf_joined_party", "=", 0, "and"],
+                        ["thief_joined_party", "=", 1, "and"],], url_path("c28f77927b81d34de265336faf85ce41")],
+                        
+                        [ [["elf_joined_party", "=", 1, "and"]], url_path("bedd9141e99d73a79f20dfa536c23423")],
+                    ],
+                    "condition": [
+                        ["thief_joined_party", "=", 1, "and"],
+                        ["ชะแลง", "=", 0, "and"],
                         ["is_lab_door_opened", "=", 0],
                     ],
                     "results": [
