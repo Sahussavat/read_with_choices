@@ -115,7 +115,7 @@ choices_wolf_boss = {
         "fight_wolf":{
             "choices_detail":"เทิร์นหลบการโจมตีหมาป่ายักษ์",
             "condition": [
-                ["how_good_can_fight", "!random", 50],
+                ["how_good_can_fight", "!random", 35],
             ],
             "results": [
                 ["HP", "-", 10],

@@ -240,7 +240,7 @@ choices_dungeon_mimic = {
         "fight_mimic":{
             "choices_detail":"เทิร์นหลบการโจมตี Mimic",
             "condition": [
-                ["how_good_can_fight", "!random", 50],
+                ["how_good_can_fight", "!random", 35],
             ],
             "results": [
                 ["HP", "-", 15],

@@ -111,7 +111,7 @@ choices_dungeon_camp = {
         "fight_thiefs":{
             "choices_detail":"เทิร์นหลบการโจมตีกองโจร",
             "condition": [
-                ["how_good_can_fight", "!random", 40],
+                ["how_good_can_fight", "!random", 35],
             ],
             "results": [
                 ["HP", "-", 15],

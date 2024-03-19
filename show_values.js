@@ -9,7 +9,7 @@ function show_values_n_items_to_player(){
         if(value['show']){
             if(value['type'] === "value"){
                 let value_box = $("<p>");
-                value_box.html( val_name + ": " +value['current_val']);
+                value_box.html( "<strong>"+val_name+"</strong>" + ": " +value['current_val']);
                 show_values_box.append(value_box);
                 show_values_box.append($("<br>"));
             } else if(value['type'] === "item" && value['current_val']){

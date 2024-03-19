@@ -11,22 +11,34 @@
             background-color: white;
             resize: none;
         }
+
+        html {
+            font-size: 20px;
+        }
     </style>
     <title >Choose Choice</title>
 </head>
 <body>
     <!-- =============================================================================================== -->
     <!-- Modal -->
-    <button id="back_btn" style="display: none;" class="btn btn-primary" onclick="history.back()">
-        ย้อนกลับ
-    </button>
-    <button type="button" class="btn btn-primary" onclick="
-        show_save_list();
-        $('#save_list_modal').modal('toggle');
-        ">
-        Save
-    </button>
-
+    <nav class="navbar navbar-light bg-light">
+        <button id="back_btn" style="display: none;" class="btn btn-secondary nav-item mx-auto" onclick="history.back()">
+            ย้อนกลับ
+        </button>
+        <button type="button" class="btn btn-primary nav-item mx-auto" onclick="
+            show_save_list();
+            $('#save_list_modal').modal('toggle');
+            ">
+            Save
+        </button>
+        <button type="button" class="btn btn-primary nav-item mx-auto" onclick="
+            show_load_save_list();
+            $('#load_save_list_modal').modal('toggle');
+            ">
+            โหลด Save
+        </button>
+      </nav>
+    
     <div class="modal fade" id="save_list_modal" aria-labelledby="save_list_modal_label" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -114,7 +126,7 @@
             <div class="modal-header">
                 <h5 class="modal-title" id="delete_save_label"></h5>
             </div>
-            <div class="modal-body">
+            <div class="modal-footer">
                 <button type="button" class="btn btn-danger" id="delete_save_confirm_btn"
                 onclick="
                     delete_save($(this).data('save_data'));
@@ -160,13 +172,6 @@
         </div>
     </div>
 
-    <button type="button" class="btn btn-primary" onclick="
-        show_load_save_list();
-        $('#load_save_list_modal').modal('toggle');
-    ">
-        โหลด Save
-    </button>
-
     <div class="modal fade" id="load_save_list_modal" aria-labelledby="load_save_list_modal_label" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -186,7 +191,7 @@
             <div class="modal-header">
                 <h5 class="modal-title" id="delete_load_save_label"></h5>
             </div>
-            <div class="modal-body">
+            <div class="modal-footer">
                 <button type="button" class="btn btn-danger" id="delete_load_save_confirm_btn"
                 onclick="
                     delete_save($(this).data('save_data'));
@@ -202,30 +207,33 @@
     </div>
     <!-- =============================================================================================== -->
 
-    <div class="container">
+    <div class="container" style="margin-top: 5%;">
         <div class="row">
-            <div class="col" style="margin-top: 5%;">
-                <div style="margin: 5%; border: 1px solid; min-height: 100%;">
+            <div class="col">
+                <div style="border: 1px solid; height: 250px; overflow: auto;">
                     <div style="margin: 5%;" id="show_values_box">
                         
                     </div>
                 </div>
             </div>
-            <div class="col" id="choices_box" style="margin: 5%;">
-                
+            <div class="col">
+                <div id="choices_box" style="margin-left: 5%; height: 250px; overflow: auto;">
+
+                </div>
             </div>
             <div class="w-100"></div>
             <div class="col" style="margin-top: 5%; margin-bottom: 5%;">
-                <div style="border: 1px solid; min-height: 100%;">
-                    <div style="margin: 5%;" id="show_items_box">
+                <div style="border: 1px solid; height: 350px; overflow: auto;">
+                    <div style="margin: 5%;" id="show_items_box" class="d-grid gap-2">
                         
                     </div>
                 </div>
             </div>
             <div class="col" style="margin-top: 5%; margin-bottom: 5%;">
-                <div style="border: 1px solid; min-height: 100%;">
+                <div style="border: 1px solid; height: 350px;">
                     <div style="margin: 5%;" id="item_show_detail_box" hidden>
-                        <div style="word-wrap: break-word;" id="item_name"></div>
+                        <div style="word-wrap: break-word; font-size: 30px; font-weight: bold;" 
+                        id="item_name"></div>
                         <div style="word-wrap: break-word; margin-top: 5%;" id="item_detail"></div>
                         <div style="margin-top: 5%;" id="item_use_area" hidden>
                             <button class="btn btn-primary" id="use_item_btn">ใช้</button>

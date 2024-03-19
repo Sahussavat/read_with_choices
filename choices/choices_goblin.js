@@ -166,7 +166,7 @@ choices_goblin = {
         "fight_goblins":{
             "choices_detail":"เทิร์นหลบการโจมตีพวกก็อบลิน",
             "condition": [
-                ["how_good_can_fight", "!random", 50],
+                ["how_good_can_fight", "!random", 35],
             ],
             "results": [
                 ["HP", "-", 15],

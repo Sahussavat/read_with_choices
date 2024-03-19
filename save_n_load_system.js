@@ -186,7 +186,7 @@ function show_load_save_list(){
         let card_save_body = $('<div>', {"class": "card-body"});
         let delete_button = $('<button>', {
             "class": "btn btn-danger",
-            "style": "margin-left: 90%;"}).html("ลบ").click(()=>{
+            "style": "margin-left: 5%;"}).html("ลบ").click(()=>{
             $("#delete_load_save").modal("toggle");
             $('#load_save_list_modal').modal('toggle');
 
@@ -203,6 +203,7 @@ function show_load_save_list(){
         card_save_inside_body.append($('<h4>', {"class": "card-title"}).html(save_data['save_name']));
         card_save_inside_body.append($('<p>', {"class": "card-text"}).html(new Date(save_data['date'])));
         
+        card_save_body.append($('<br>'));
         card_save_body.append(delete_button);
 
         load_save_box.append(card_save);

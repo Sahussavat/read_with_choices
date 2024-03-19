@@ -36,7 +36,7 @@ function get_choices(choices_name, enable_choice_results = true){
                 choices_box.append($("<br>"));
                 for(const choice_pass_no in choices_pass_condition){
                     let choice_pass = choices_pass_condition[choice_pass_no];
-                    let choice_btn = $("<button>", {"style": "margin-top:5%"});
+                    let choice_btn = $("<button>", {"style": "margin-top:5%", "class": "btn btn-outline-secondary"});
                     choice_btn.html(choice_pass[0]);
                     choice_btn.click(()=>{
                         choice_pass[2]();
