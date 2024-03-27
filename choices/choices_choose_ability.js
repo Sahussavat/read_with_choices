@@ -5,6 +5,10 @@ choices_choose_ability = {
             "condition": [
             ],
             "results": [
+                ["แต้ม Ability", "_show", true],
+                ["HP", "_show", false],
+                ["เงิน", "_show", false],
+                ["เอฟเฟคปราศจากกลิ่นตัว", "_show", false],
             ],
             "results_w_condition":[
             ],

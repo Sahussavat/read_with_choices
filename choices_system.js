@@ -108,8 +108,12 @@ function do_results(results){
         if(result[0] in values){
             let value = values[result[0]]["current_val"];
             let value_change = turn_variable_name_to_value(result[2]);
-            let sym = do_assign_fn(result[1]);
-            values[result[0]]["current_val"] = sym(value, value_change);
+            if(result[1] === "_show"){
+                values[result[0]]["show"] = value_change;
+            } else {
+                let sym = do_assign_fn(result[1]);
+                values[result[0]]["current_val"] = sym(value, value_change);
+            }
         } else if(result[1] === "_enable_encounter"){
             enable_encounter = true;
         }
